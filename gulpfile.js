@@ -82,7 +82,7 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/polyfils/*.js",
-    "source/favicon"
+    "source/favicon*"
   ], {
     base: "source"
   })
@@ -125,12 +125,12 @@ gulp.task("css-nomin", function () {
 });
 
 gulp.task("rename", function () {
-  return gulp.src("source/img/*")
+  return gulp.src("source/img/icn/*")
     .pipe(rename(function(path) {
       var name = path.basename;
-      path.basename = name.split(" ").join("");
+      path.basename = "icn_" + name.split(" ").join("");
     }))
-    .pipe(gulp.dest("source/img/"));
+    .pipe(gulp.dest("source/img/icn"));
 });
 
 gulp.task("build", gulp.series(
