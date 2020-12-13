@@ -9,64 +9,208 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__logo logo">
-            <a class="logo__link">
-                <picture>
-                    <source type="image/webp" srcset="img/Logo1.png 1x, img/Logo1@2x.png 2x">
-                    <img src="img/Logo1.png" alt="Логотип Базис-КР" srcset="img/Logo1@2x.png 2x" width="138" height="56">
-                </picture>
-            </a>
-        </div>
-        <nav class="header__nav nav">
-            <button class="nav__menu-button" type="button">
-                <span class="visually-hidden">Menu</span>
-                <svg class="nav__menu-icn" width="16" height="16">
-                    <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
-                </svg>
-            </button>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Услуги</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Проекты</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">О компании</a>
-                </li>
-            </ul>
-            <div class="owner-info">
-                <div class="owner-info__avatar">
+        <div class="header__wrapper">
+            <div class="header__logo logo">
+                <a class="logo__link">
                     <picture>
-                        <source type="image/webp" srcset="img/ 1x, img/ 2x">
-                        <img src="img/" alt="Цидуля Павел Александрович" srcset="img/ 2x" width="56" height="56">
+                        <source type="image/webp" srcset="img/Logo1.png 1x, img/Logo1@2x.png 2x">
+                        <img src="img/Logo1.png" alt="Логотип Базис-КР" srcset="img/Logo1@2x.png 2x" width="138" height="56">
                     </picture>
+                </a>
+            </div>
+            <nav class="header__nav nav">
+                <button class="nav__menu-button" type="button">
+                    <span class="visually-hidden">Menu</span>
+                    <svg class="nav__menu-icn" width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icn_Group1"></use>
+                    </svg>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Услуги</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Проекты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">О компании</a>
+                    </li>
+                </ul>
+                <div class="owner-info">
+                    <div class="owner-info__avatar">
+                        <picture>
+                            <source type="image/webp" srcset="img/ 1x, img/ 2x">
+                            <img src="img/" alt="Цидуля Павел Александрович" srcset="img/ 2x" width="56" height="56">
+                        </picture>
+                    </div>
+                    <div class="owner-info__text">
+                        <p class="owner-info__name">Цидуля Павел Александрович</p>
+                        <p class="owner-info__phone">
+                            <span class="owner-info__post">Директор</span>
+                            <a href="tel:+380966185013" class="owner-info__phone">
+                                <svg class="owner-info__phone-icn" width="16" height="16">
+                                    <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
+                                </svg>
+                                +38 096 618 50 13
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="owner-info__text">
-                    <p class="owner-info__name">Цидуля Павел Александрович</p>
-                    <p class="owner-info__phone">
-                        <span class="owner-info__post">Директор</span>
-                        <a href="tel:+380966185013" class="owner-info__phone">
-                            <svg class="owner-info__phone-icn" width="16" height="16">
-                                <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
-                            </svg>
-                            +38 096 618 50 13
-                        </a>
+            </nav>  
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section welcome-section">
+            <div class="welcome-section__wrapper">
+                <h1 class="welcome-section__title main-title">
+                    <span class="main-title__company-name">Базис-КР</span>
+                    Разработка проектной документации объектов
+                    span.
+                    <span class="main-title__hightlight">гражданского и промышленного</span>
+                    назначения
+                </h1>
+                <form action="#" method="POST" class="welcome-section__contact-form contact-form">
+                    <legend class="contact-form__legend">Нужна проектная документация без головной боли?
+                        <span class="contact-form__legend">Оставьте заявку</span>
+                    </legend>
+                    <input class="contact-form__input" type="text" name="name" id="name" placeholder="Ваше имя">
+                    <input class="contact-form__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+                    <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
+                    <p class="contact-form__confidence-policy confidence-policy">
+                        Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
                     </p>
+                </form>
+            </div>
+        </section>
+        <section class="main__section tabs-section">
+            <div class="tabs-section__wrapper">
+                <h2 class="tabs-section__title">Проектная документация любой сложности под ключ</h2>
+                <div class="tabs-section__tabs tabs">
+                    <button class="tabs__menu-button tabs__menu-button--prev">
+                        <span class="visually-hidden">Назад</span>
+                    </button>
+                    <button class="tabs__menu-button tabs__menu-button--next">
+                        <span class="visually-hidden">Вперед</span>
+                    </button>
+                    <ul class="tabs__menu">
+                        <li class="tabs__menu-item">
+                            <a class="tabs__link">Градостроительство</a>
+                        </li>
+                        <li class="tabs__menu-item">
+                            <a class="tabs__link tabs__link--active">Инженерное обеспечение зданий и сооружений</a>
+                        </li>
+                        <li class="tabs__menu-item">
+                            <a class="tabs__link">Безопасность</a>
+                        </li>
+                    </ul>
+                    <ul class="tabs__list">
+                        <li class="tabs__item tab">
+                            <h3 class="visually-hidden">Градостроительство</h3>
+                            <ul class="tab__features-list">
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Разработка градостроительной документации.</h4>
+                                    <p class="item__description">Выполнение проектов генеральных планов населенных пунктов, землеустройства по изменению границ населенного пункта, отвода земельного участка любого целевого назначения (или его изменения), детальной планировки територий, нормативной денежной оценки земель населенного пункта и других документов в сфере градостроения согласно ДБН Б.1.1-15 2012.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Разработка архитектурно-строительных чертежей, железобетонных и металлических конструкций объектов строительства</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Проведение авторского надзора за строительством.</h4>
+                                    <p class="item__description"></p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tabs__item tab">
+                            <h3 class="visually-hidden">Инженерное обеспечение зданий и сооружений</h3>
+                            <ul class="tab__features-list">
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Внутренние системы водоснабжения</h4>
+                                    <p class="item__description">Проектирование внутренних систем холодного и горячего водоснабжения, канализаций и водостока согласно ДБН В.2.5-64: 2012.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Внешние сети водоснабжения</h4>
+                                    <p class="item__description">Проектирование внешних сетей водоснабжения: хозяйственно-питьевого, противопожарного и технического (оборотное водоснабжение), насосные станции и  станции водоочистки согласно с ДБН В.2.5-74: 2013</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Внешние сети водоотведения (канализаций):</h4>
+                                    <p class="item__description">Проектирование внешних сетей водоотведения (канализаций): хозяйственно-бытовых, производственных и ливневых стоков, канализационные насосные станции  и станции очистки стоков согласно ДБН В.2.5-75: 2013.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Тепловые сети</h4>
+                                    <p class="item__description">Проектирование тепловых сетей: теплоснабжение зданий и сооружений, тепловые пункты, котельные, теплогенераторные на газоподобном и твердом топливе согласно с ДБН В.2.5-39: 2008, ДБН В.2.5-20: 2001.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Внешние и внутренние системы газоснабжения</h4>
+                                    <p class="item__description">Проектирование внешних и внутренних систем газоснабжения высокого, среднего и низкого давлений: наружное газоснабжение населенных пунктов (улиц, поселков) промышленных предприятий, площадок, проектирование узлов учета природного газа, газорегуляторных пунктов (ГРП / ШГРП), способов дистанционной передачи данных, проектирование систем внутреннего газоснабжения согласно с ДБН-В.2.5-20: 2001, НПАОП 0.00-1.76-15.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title">Электротехнические системы</h4>
+                                    <p class="item__description">Проектирование электротехнических систем зданий и сооружений, автоматизация (АСУ ТП, КВП), электрическое освещение, силовое электрооборудование, электроснабжение технологического оборудования зданий и сооружений.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tabs__item tab">
+                            <h3 class="visually-hidden">Безопасность</h3>
+                            <ul class="tab__features-list">
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Проектирование молниезащиты зданий и сооружений согласно ДСТУ Б В.2.5-38: 2008.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Проектирование систем пожарной сигнализации и оповещения о пожаре.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Проектирование мероприятий по защите подземных инженерних систем от электрохимической коррозии: станции катодной защиты, протекторная защита.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Проектирование и оценка влияния на окружающую среду (ОВОС).</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Разработка энергетического паспорта зданий  согласно ДБН В.2.6-31: 2016.</p>
+                                </li>
+                                <li class="tab__features-item">
+                                    <h4 class="tab__item-title"></h4>
+                                    <p class="item__description">Проведение идентификации объектов повышенной опасности согласно с законом Украины "Про объекты повышенной опасности".</p>
+                                </li>
+                            </ul>
+                        </li>        
+                    </ul>
+                    <button class="button-blue">Получить консультацию</button>
                 </div>
             </div>
-        </nav>  
-    </header>
+        </section>
+        <section class="main__section important-section">
+            <div class="important-section__wrapper">
+                <h2 class="important-section__title">Мы понимаем, что для вас важно</h2>
+                <ul class="important-section__list important">
+                    <li class="important__item">
+                        <p class="important__text">Адекватная цена за высокое качество</p>
+                    </li>
+                    <li class="important__item">
+                        <p class="important__text">Соблюдение сроков подготовки документации</p>
+                    </li>
+                    <li class="important__item">
+                        <p class="important__text">Соответствие проектной документации действующим нормативным документам</p>
+                    </li>
+                    <li class="important__item">
+                        <p class="important__text">Авторский надзор за строительством</p>
+                        <p class="important__subtext">(Контроль соответствия строительно-монтажных работ проектной документации)</p>
+                    </li>
+                    <li class="important__item">
+                        <p class="important__text">Сопровождение проектной документации на всех стадиях</p>
+                        <p class="important__subtext">(Сбор и подготовка исходных данных, проведение инженерных изысканий (геология, геодезия), прохождение экспертизи проектно-сметной документации)</p>
+                    </li>
+                </ul>
+                <p class="important-section__text">Предоставляем качественные услуги по проектной документации. <span class="important-section__orange">Мы более 7 лет на рынке!</span> Работая с нами, вы получите проект для любого вида строительства. Просто оформите заявку и ждите звонка нашего консультанта. Мы сделаем вам лучшее предложение!</p>
+                <button class="button-blue">Оформить заявку</button>
+            </div>
+        </section>
+    </main>
     <script src="js/script.min.js"></script>
-    <script>
-        var svg = document.querySelector('.nav__menu-button').querySelector('use')
-        console.dir(svg);
-        Array.from(svg.attributes).forEach((it) => {
-            if (it.name  === 'xlink:href') {
-                it.nodeValue = 'img/sprite.svg#icn_Frame-1'
-            }
-        })
-        console.log(svg);
-    </script>
 </body>
 </html>
