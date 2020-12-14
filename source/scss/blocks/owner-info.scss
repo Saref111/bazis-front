@@ -1,0 +1,64 @@
+.owner-info {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 296px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: #c4c4c4;
+        top: -30px;
+        left: calc(-100vw / 2 + 50%);
+    }
+
+    &__avatar {
+        width: 56px;
+        height: 56px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #303030;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__phone {
+        margin: 0;
+    }
+
+    &__post {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #BDBDBD;
+    }
+
+    &__phone-link {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #3029DB;
+        margin-left: 10px;
+    }
+
+    &__phone-icn {
+        transform: translateY(3px);
+    }
+}

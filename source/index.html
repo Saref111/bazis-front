@@ -11,20 +11,23 @@
     <header class="header">
         <div class="header__wrapper">
             <div class="header__logo logo">
-                <a class="logo__link">
+                <a href="/" class="logo__link">
                     <picture>
                         <source type="image/webp" srcset="img/Logo1.png 1x, img/Logo1@2x.png 2x">
                         <img src="img/Logo1.png" alt="Логотип Базис-КР" srcset="img/Logo1@2x.png 2x" width="138" height="56">
                     </picture>
                 </a>
             </div>
-            <nav class="header__nav nav">
-                <button class="nav__menu-button" type="button">
-                    <span class="visually-hidden">Menu</span>
-                    <svg class="nav__menu-icn" width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icn_Group1"></use>
-                    </svg>
-                </button>
+            <button class="header__menu-button" type="button">
+                <span class="visually-hidden">Menu</span>
+                <svg class="header__menu-icn header__menu-icn--hidden" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icn_Group1"></use>
+                </svg>
+                <svg class="header__menu-icn" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icn_Frame-1"></use>
+                </svg>
+            </button>
+            <nav class="header__nav nav nav--visible">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#" class="nav__link">Услуги</a>
@@ -39,15 +42,15 @@
                 <div class="owner-info">
                     <div class="owner-info__avatar">
                         <picture>
-                            <source type="image/webp" srcset="img/ 1x, img/ 2x">
-                            <img src="img/" alt="Цидуля Павел Александрович" srcset="img/ 2x" width="56" height="56">
+                            <source type="image/webp" srcset="img/Ellipse1.webp 1x, img/Ellipse1@2x.webp 2x">
+                            <img src="img/Ellipse1.png" alt="Цидуля Павел Александрович" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
                         </picture>
                     </div>
                     <div class="owner-info__text">
                         <p class="owner-info__name">Цидуля Павел Александрович</p>
                         <p class="owner-info__phone">
                             <span class="owner-info__post">Директор</span>
-                            <a href="tel:+380966185013" class="owner-info__phone">
+                            <a href="tel:+380966185013" class="owner-info__phone-link">
                                 <svg class="owner-info__phone-icn" width="16" height="16">
                                     <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
                                 </svg>
@@ -56,6 +59,7 @@
                         </p>
                     </div>
                 </div>
+                <div class="nav__background">   </div>
             </nav>  
         </div>
     </header>
