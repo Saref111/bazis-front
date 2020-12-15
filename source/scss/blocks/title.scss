@@ -1,0 +1,37 @@
+.title {
+    font-family: SF Pro Display, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #303030;
+    margin: 0;
+
+    &--main {
+        position: relative;
+        width: 340px;
+        padding-left: 32px;
+        padding-right: 20px;
+        margin: 0 auto;
+
+        & .orange {
+            white-space: nowrap;
+            display: block;
+            margin-left: -35px;
+        }
+    }
+
+    &__company-name {
+        position: absolute;
+        text-transform: none;
+        top: -20px;
+        left: -2px;
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #BDBDBD;
+    }
+}

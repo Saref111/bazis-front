@@ -1,0 +1,11 @@
+.welcome-section {
+    padding-top: 67px;
+
+    &__wrapper {
+        width: 100%;
+        background-image: url("../img/bazis-kr.png");
+        background-size: 489px 105px;
+        background-repeat: no-repeat;
+        background-position: 0 8px;
+    }
+}
