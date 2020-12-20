@@ -1,16 +1,31 @@
-const menuButtonElement = document.querySelector('.header__menu-button')
-const menuButtonIconElements = Array.from(menuButtonElement.querySelectorAll('svg'))
-const navElement = document.querySelector('.nav')
-const ownerInfoElement = document.querySelector('.owner-info')
+// const menuButtonElement = document.querySelector('.header__menu-button')
+// const menuButtonIconElements = Array.from(menuButtonElement.querySelectorAll('svg'))
+// const navElement = document.querySelector('.nav')
+// const ownerInfoElement = document.querySelector('.owner-info')
 
 
-const toggleMobileMenu = () => {
-    menuButtonIconElements.forEach((icon) => {
-        icon.classList.toggle('header__menu-icn--hidden')
-    })
-    navElement.classList.toggle('nav--visible')
+// const toggleMobileMenu = () => {
+//     menuButtonIconElements.forEach((icon) => {
+//         icon.classList.toggle('header__menu-icn--hidden')
+//     })
+//     navElement.classList.toggle('nav--visible')
+// }
+
+// toggleMobileMenu()
+
+// menuButtonElement.addEventListener('click', toggleMobileMenu)
+
+const NavigationComponent = {
+    data() {
+        return {
+            isMenuOpen: false
+        }
+    },
+    methods: {
+        toggleMobileMenu() {
+            this.isMenuOpen = !this.isMenuOpen
+        }
+    }
 }
 
-toggleMobileMenu()
-
-menuButtonElement.addEventListener('click', toggleMobileMenu)
+Vue.createApp(NavigationComponent).mount('#navigation')
