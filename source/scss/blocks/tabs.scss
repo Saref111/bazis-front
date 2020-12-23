@@ -33,12 +33,52 @@
 
         padding: 23px 0;
         display: flex;
-
-
     }
 
     &__menu-item {
         margin-left: 20px;
         display: block;
+
+        &:last-child a {
+            display: block;
+            margin-top: 12px;
+        }
+    }
+
+    &__link {
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        font-size: 16px;
+        color: #BDBDBD;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        
+        &--active {
+            color: #3029DB;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 8px;
+                height: 1px;
+                background: #403DE4;
+                z-index: 10;
+                top: 11px;
+                left: -20px;
+            }
+        }
+    }
+
+    &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
     }
 }

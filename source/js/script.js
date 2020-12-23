@@ -12,13 +12,29 @@ const NavigationComponent = {
     }
 }
 
+const TabsComponent = {
+    data() {
+        return {
+            currentTab: 1,
+        }
+    },
+    methods: {
+        isCurrent(id) {
+            return id === this.currentTab
+        },
+        setCurrent(id) {
+            return this.currentTab = id
+        }
+    }
+}
+
+
+
+Vue.createApp(NavigationComponent).mount('#navigation')
+Vue.createApp(TabsComponent).mount('#tabs')
 const ListSwiper = new Swiper ('.tabs', {
     setWrapperSize: true,
     spaceBetween: 0,
     slidesPerView: 1.16,
-    
+    initialSlide: 1
 })
-
-console.log(ListSwiper)
-
-Vue.createApp(NavigationComponent).mount('#navigation')
