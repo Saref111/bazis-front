@@ -6,7 +6,8 @@
     <link rel="icon" type="image/svg" href="favicon.svg" />
     <title>Базис-КР</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header id="navigation" class="header">
@@ -87,7 +88,7 @@
         </section>
         <section class="main__section tabs-section">
             <div class="tabs-section__wrapper">
-                <h2 class="tabs-section__title title">Проектная документация любой сложности под ключ</h2>
+                <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
                 <div class="tabs-section__tabs tabs">
                     <button class="tabs__menu-button tabs__menu-button--prev">
                         <span class="visually-hidden">Назад</span>
@@ -95,14 +96,14 @@
                     <button class="tabs__menu-button tabs__menu-button--next">
                         <span class="visually-hidden">Вперед</span>
                     </button>
-                    <ul class="tabs__menu">
-                        <li class="tabs__menu-item">
+                    <ul class="tabs__menu swiper-wrapper">
+                        <li class="tabs__menu-item swiper-slide">
                             <a class="tabs__link">Градостроительство</a>
                         </li>
-                        <li class="tabs__menu-item">
-                            <a class="tabs__link tabs__link--active">Инженерное обеспечение зданий и сооружений</a>
+                        <li class="tabs__menu-item swiper-slide">
+                            <a class="tabs__link tabs__link--active">Инженерное обеспечение зданий <br> и сооружений</a>
                         </li>
-                        <li class="tabs__menu-item">
+                        <li class="tabs__menu-item swiper-slide">
                             <a class="tabs__link">Безопасность</a>
                         </li>
                     </ul>

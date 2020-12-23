@@ -4,11 +4,22 @@
     &__wrapper {
         width: 100%;
         padding: 0 15px;
-        padding-top: 400px;
+        padding-top: 420px;
 
         background-image: url("../img/Photo-mobile.png");
         background-repeat: no-repeat;
         background-position-y: 40px;
         background-position-x: center;
+    }
+
+    &__title {
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: none;
+        color: #303030;
+        margin-bottom: 32px;
     }
 }
