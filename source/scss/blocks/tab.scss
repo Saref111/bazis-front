@@ -1,0 +1,83 @@
+.tab {
+    width: 100%;
+    padding-top: 210px;
+    padding-left: 20px;
+
+    &:nth-child(2) {
+        background-image: url("../img/scale-mobile.jpg"), url("../img/tap-mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 27px,193px 27px;
+        
+        @media (min-resolution: 1.5dppx) {
+            background-image: url("../img/scale-mobile@2x.jpg"), url("../img/tap-mobile@2x-1.jpg");
+            
+        }
+    }
+
+    &__features-list {
+        @include list-reset;
+
+        width: 100%;
+    }
+
+    &__features-item {
+        margin-bottom: 35px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: right;
+            color: #C4C4C4;
+            top: -10px;
+            left: -18px;
+        }
+
+        &:nth-child(1)::before {
+            content: "01";
+        }
+        &:nth-child(2)::before {
+            content: "02";
+        }
+        &:nth-child(3)::before {
+            content: "03";
+        }
+        &:nth-child(4)::before {
+            content: "04";
+        }
+        &:nth-child(5)::before {
+            content: "05";
+        }
+        &:nth-child(6)::before {
+            content: "06";
+        }
+        &:nth-child(7)::before {
+            content: "07";
+        }
+    }
+
+    &__item-title {
+        margin: 0;
+        margin-bottom: 12px;
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #303030;
+    }
+
+    &__item-description {
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #303030;
+        margin: 0;
+    }
+}

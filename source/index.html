@@ -90,23 +90,25 @@
             <div class="tabs-section__wrapper" id="tabs">
                 <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
                 <div class="tabs-section__tabs tabs">
-                    <button class="tabs__menu-button tabs__menu-button--prev">
-                        <span class="visually-hidden">Назад</span>
-                    </button>
-                    <button class="tabs__menu-button tabs__menu-button--next">
-                        <span class="visually-hidden">Вперед</span>
-                    </button>
-                    <ul class="tabs__menu swiper-wrapper">
-                        <li class="tabs__menu-item swiper-slide">
-                            <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }" @click="setCurrent(0)">Градостроительство</a>
-                        </li>
-                        <li class="tabs__menu-item swiper-slide">
-                            <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }" @click="setCurrent(1)">Инженерное обеспечение зданий <br> и сооружений</a>
-                        </li>
-                        <li class="tabs__menu-item swiper-slide">
-                            <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }" @click="setCurrent(2)">Безопасность</a>
-                        </li>
-                    </ul>
+                    <div class="tabs__slide-wrapper">
+                        <button class="tabs__menu-button tabs__menu-button--prev">
+                            <span class="visually-hidden">Назад</span>
+                        </button>
+                        <button class="tabs__menu-button tabs__menu-button--next">
+                            <span class="visually-hidden">Вперед</span>
+                        </button>
+                        <ul class="tabs__menu swiper-wrapper">
+                            <li class="tabs__menu-item swiper-slide">
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Градостроительство</a>
+                            </li>
+                            <li class="tabs__menu-item swiper-slide">
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }"  @click="setCurrent(1)">Инженерное обеспечение зданий <br> и сооружений</a>
+                            </li>
+                            <li class="tabs__menu-item swiper-slide">
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }"  @click="setCurrent(2)">Безопасность</a>
+                            </li>
+                        </ul>
+                    </div class="tabs__slide-wrapper">
                     <ul class="tabs__list">
                         <li class="tabs__item tab" :class="{ 'tabs__item--active' : isCurrent(0) }">
                             <h3 class="visually-hidden">Градостроительство</h3>

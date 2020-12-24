@@ -3,10 +3,26 @@
 
     &__wrapper {
         width: 100%;
-        background-image: url("../img/bazis-kr.png");
-        background-size: 489px 105px;
-        background-repeat: no-repeat;
-        background-position: 0 8px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "Базис-КР";
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 144px;
+            line-height: 172px;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: #fff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(48, 48, 48, 0.2);
+            white-space: nowrap;
+            display: block;
+            top: -26px;
+            left: -10px;
+        }
     }
 
     &__contact-form {

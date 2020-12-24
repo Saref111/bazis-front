@@ -32,7 +32,7 @@ const TabsComponent = {
 
 Vue.createApp(NavigationComponent).mount('#navigation')
 Vue.createApp(TabsComponent).mount('#tabs')
-const ListSwiper = new Swiper ('.tabs', {
+const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     setWrapperSize: true,
     spaceBetween: 0,
     slidesPerView: 1.16,

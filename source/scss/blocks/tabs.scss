@@ -38,6 +38,20 @@
     &__menu-item {
         margin-left: 20px;
         display: block;
+        position: relative;
+
+        &:nth-child(1) a.tabs__link--active::after {
+            content: "01";
+        }
+
+        &:nth-child(2) a.tabs__link--active::after {
+            content: "02";
+        }
+
+        &:nth-child(3) a.tabs__link--active::after {
+            content: "03";
+            top: -32px;
+        }
 
         &:last-child a {
             display: block;
@@ -46,7 +60,7 @@
     }
 
     &__link {
-        font-family: SF Pro Display;
+        font-family: SF Pro Display, sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -56,7 +70,23 @@
         display: block;
         cursor: pointer;
         width: 100%;
-        
+
+        &::after {
+            position: absolute;
+            font-family: SF Pro Display, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 86px;
+            color: #fff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgba(48, 48, 48, 0.2);
+            top: -20px;
+            left: -52px;
+            text-align: center;
+            z-index: -1;
+        }
+
         &--active {
             color: #3029DB;
             position: relative;
@@ -71,6 +101,7 @@
                 top: 11px;
                 left: -20px;
             }
+
         }
     }
 
@@ -80,5 +111,11 @@
         &--active {
             display: block;
         }
+    }
+
+    &__list {
+        @include list-reset;
+
+        width: 100%;
     }
 }
