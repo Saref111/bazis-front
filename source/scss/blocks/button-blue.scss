@@ -12,4 +12,9 @@
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    &--full {
+        display: block;
+        width: 100%;
+    }
 }

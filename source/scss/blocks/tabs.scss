@@ -1,6 +1,5 @@
 .tabs {
     width: 100%;
-    overflow: hidden;
     position: relative;
 
     &::before {
@@ -13,14 +12,18 @@
         left: calc(-100vw / 2 + 50%);
     }
 
-    &::after {
-        position: absolute;
-        content: "";
-        width: 100vw;
-        height: 1px;
-        background-color: #c4c4c4;
-        top: 100%;
-        left: calc(-100vw / 2 + 50%);
+    &__slide-wrapper {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100vw;
+            height: 1px;
+            background-color: #c4c4c4;
+            top: 100%;
+            left: calc(-100vw / 2 + 50%);
+        }
     }
 
     &__menu-button {
