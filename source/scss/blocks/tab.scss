@@ -3,6 +3,11 @@
     padding-top: 210px;
     padding-left: 20px;
 
+    &:nth-child(1) {
+        background-image: url("../img/town-mobile.jpg"), url("../img/town-mobile2.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 27px,193px 27px;
+    }
     &:nth-child(2) {
         background-image: url("../img/scale-mobile.jpg"), url("../img/tap-mobile.jpg");
         background-repeat: no-repeat;
@@ -12,6 +17,11 @@
             background-image: url("../img/scale-mobile@2x.jpg"), url("../img/tap-mobile@2x-1.jpg");
             
         }
+    }
+    &:nth-child(3) {
+        background-image: url("../img/safe-mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center 27px;
     }
 
     &__features-list {
