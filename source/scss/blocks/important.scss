@@ -1,0 +1,102 @@
+.important {
+    @include list-reset;
+    padding-top: 238px;
+
+
+    background-image: url("../img/Group12.png"), url("../img/Group17.png");
+    background-size: 214px 126px, 150px, 157px;
+    background-position: 0 85px, 180px 25px;
+    background-repeat: no-repeat;
+
+    &__item {
+        border: 1px solid #BDBDBD;
+        border-bottom-color: transparent;
+        padding-top: 137px;
+        padding-left: 22px;
+        padding-right: 19px;
+        padding-bottom: 22px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "01";
+            font-family: SF Pro Display, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #BDBDBD;
+            top: 23px;
+            left: 23px;
+        }
+
+        &:nth-child(2)::before {
+            content: "02";
+        }
+
+        &:nth-child(3)::before {
+            content: "03";
+        }
+
+        &:nth-child(4)::before {
+            content: "04";
+        }
+
+        &:nth-child(5)::before {
+            content: "05";
+        }
+
+        &:nth-child(6)::before {
+            content: "06";
+        }
+
+        &:last-child {
+            border-bottom-color: #BDBDBD;
+        }
+
+        &--three-lines {
+            padding-top: 114px;
+        }
+
+        &--sub {
+            padding-top: 110px;
+        }
+
+        &--many-lines {
+            padding-top: 50px;
+        }
+
+        &:hover,
+        &:active {
+            background-color: #FF7800;
+            color: white;
+
+            & p,
+            &::before {
+                color: white;
+            }
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #303030;
+    }
+
+    &__subtext {
+        margin: 0;
+        margin-top: 16px;
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 140%;
+        color: #828282;
+    }
+
+}

@@ -1,6 +1,9 @@
 .tabs {
     width: 100%;
     position: relative;
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(196, 196, 196, 1);
+    overflow: hidden;
 
     &::before {
         position: absolute;

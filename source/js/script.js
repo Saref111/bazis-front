@@ -36,5 +36,6 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     setWrapperSize: true,
     spaceBetween: 0,
     slidesPerView: 1.16,
-    initialSlide: 1
+    initialSlide: 1,
+    watchOverflow: false,
 })
