@@ -4,12 +4,12 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
-    text-transform: uppercase;
     color: #303030;
     margin: 0;
-
+    
     &--main {
         position: relative;
+        text-transform: uppercase;
         width: 340px;
         padding-left: 32px;
         padding-right: 20px;

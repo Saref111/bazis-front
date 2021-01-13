@@ -1,0 +1,41 @@
+.img-container {
+    width: 345px;
+    height: 260px;
+    position: relative;
+    margin: 0 auto;
+
+    &__list {
+        @include list-reset;
+
+        position: absolute;
+        width: 100%;
+        display: flex;
+    }
+
+    &__item {
+        width: 100%;
+    }
+
+    &__pag {
+        position: absolute;
+        left: 50%;
+        bottom: -35px;
+        transform: translateX(-50%);
+        z-index: 11111111;
+    }
+
+    &__pag-button {
+        padding: 0;
+        margin: 0;
+        margin-right: 16px;
+        border: none;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: #CCBFB6;
+
+        &--active {
+            background-color: #FF7800;
+        }
+    }
+}

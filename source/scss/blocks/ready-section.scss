@@ -1,0 +1,17 @@
+.ready-section {
+    width: 100%;
+    background: #FDF9F3;
+    
+    &__wrapper {
+        width: 100%;
+        padding: 0 15px;
+        padding-top: 70px;
+    }
+    
+    &__list {
+        @include list-reset;
+
+        width: 100%;
+        padding-top: 40px;
+    }
+}
