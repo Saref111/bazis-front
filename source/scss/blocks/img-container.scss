@@ -1,8 +1,9 @@
 .img-container {
     width: 345px;
-    height: 260px;
+    height: 310px;
     position: relative;
     margin: 0 auto;
+    overflow: hidden;
 
     &__list {
         @include list-reset;
@@ -19,7 +20,7 @@
     &__pag {
         position: absolute;
         left: 50%;
-        bottom: -35px;
+        bottom: 27px;
         transform: translateX(-50%);
         z-index: 11111111;
     }
