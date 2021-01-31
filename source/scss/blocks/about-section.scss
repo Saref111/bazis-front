@@ -1,0 +1,37 @@
+.about-section {
+    padding-top: 70px;
+    width: 100%;
+
+    &__wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    &__company {
+        margin: 32px 0;
+        padding-top: 228px;
+        background-image: url('../img/company-mobile.png');
+        background-repeat: no-repeat;
+        background-position: center 0;
+        background-size: 345px 183px;
+
+        @media (min-resolution: 1.5dppx) {
+            background-image: url('../img/company-mobile@2x.png');
+        }
+        
+        & .orange:first-child {
+            position: relative;
+            padding-left: 35px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 24px;
+                height: 1px;
+                top: 12px;
+                left: 4px;
+                background-color: #FF7800;
+            }
+        }
+    }
+}

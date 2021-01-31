@@ -72,7 +72,6 @@ const ProjectSwiperTwo = new Swiper('.containerTwo', {
         bulletActiveClass: 'img-container__pag-button--active',
         clickable: true,
         renderBullet: function (index, className) {
-            console.log(className)
             return `<button class="${className}">
                 <span class="visually-hidden">Слайд ${index}</span>
             </button>`;

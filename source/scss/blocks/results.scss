@@ -1,0 +1,41 @@
+.results {
+    font-family: SF Pro Display, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #303030;
+
+    &__paragraph {
+        margin: 20px 0;
+    }
+
+    &__list {
+        @include list-reset;
+
+
+    }
+
+    &__item {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        border-top: 1px solid #c4c4c4;
+        padding-top: 15px;
+        padding-bottom: 40px;
+        
+        &:last-child {
+            border-bottom: 1px solid #c4c4c4;
+            padding-bottom: 78px;
+        }
+    }
+
+    &__number {
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 76px;
+        padding-right: 15px;
+
+        color: #000000;
+    }
+}
