@@ -421,20 +421,20 @@
                         <button class="reviews__button reviews__button--prev"><span class="visually-hidden">Назад</span></button>
                         <button class="reviews__button reviews__button--next"><span class="visually-hidden">Вперед</span></button>
                     </div>
-                    <ul class="reviews__list">
-                        <li class="reviews__item">
+                    <ul class="reviews__list swiper-wrapper">
+                        <li class="reviews__item swiper-slide">
                             <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
                             <cite class="reviews__author">Администрация школы №58</cite>
                         </li>
-                        <li class="reviews__item">
+                        <li class="reviews__item swiper-slide">
                             <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
                             <cite class="reviews__author">Администрация школы №58</cite>
                         </li>
-                        <li class="reviews__item">
+                        <li class="reviews__item swiper-slide">
                             <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
                             <cite class="reviews__author">Администрация школы №58</cite>
                         </li>
-                        <li class="reviews__item">
+                        <li class="reviews__item swiper-slide">
                             <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
                             <cite class="reviews__author">Администрация школы №58</cite>
                         </li>
@@ -474,17 +474,14 @@
     <footer class="footer">
         <div class="footer__logo">
             <span class="orange-label">Проектная документация</span>
-            <picture>
-                <source media="(min-width: 768px)" srcset="">
-                <img src="" alt="">
-            </picture>
+            <p class="footer__logo-text">Базис-КР</p>
         </div>
         <div class="footer__contacts">
-            <div class="owner-info">
+            <div class="owner-info owner-info--no-border">
                 <div class="owner-info__avatar">
                     <picture>
-                        <source type="image/webp" srcset="img/ 1x, img/ 2x">
-                        <img src="img/" alt="Цидуля Павел Александрович" srcset="img/ 2x" width="56" height="56">
+                        <source type="image/webp" srcset="img/Ellipse1.webp 1x, img/Ellipse1@2x.webp 2x">
+                        <img src="img/Ellipse1.png" alt="Цидуля Павел Александрович" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
                     </picture>
                 </div>
                 <div class="owner-info__text">
@@ -493,16 +490,16 @@
                         <span class="owner-info__post">Директор</span>
                         <a href="tel:+380966185013" class="owner-info__phone">
                             <svg class="owner-info__phone-icn" width="16" height="16">
-                                <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
+                                <use xlink:href="img/sprite.svg#icn_Frame3"></use>
                             </svg>
                             +38 096 618 50 13
                         </a>
                     </p>
                 </div>
                 <button class="owner-info__submit-button button-blue" type="submit">Оставить заявку</button>
-                <!-- <p class="owner-info__confidence-policy confidence-policy">
-                    Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
-                </p> -->
+                <p class="owner-info__confidence-policy confidence-policy">
+                    <a href="#" class="confidence-policy__link">Политика конфиденциальности</a>
+                </p>
             </div>
         </div>
     </footer>
