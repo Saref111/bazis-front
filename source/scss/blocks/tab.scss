@@ -12,6 +12,7 @@
         background-image: url("../img/scale-mobile.jpg"), url("../img/tap-mobile.jpg");
         background-repeat: no-repeat;
         background-position: 0 27px,193px 27px;
+        background-size: 188px 162px;
         
         @media (min-resolution: 1.5dppx) {
             background-image: url("../img/scale-mobile@2x.jpg"), url("../img/tap-mobile@2x-1.jpg");

@@ -39,20 +39,80 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     initialSlide: 1,
     watchOverflow: false,
 });
-const ProjectSwiper = new Swiper('#container', {
+const ProjectSwiperOne = new Swiper('.containerOne', {
     slidesPerView: 1,
     initialSlide: 0,
     watchOverflow: true,
     setWrapperSize: true,
     spaceBetween: 30,
     pagination: {
-        el: '.img-container__pag',
+        el: '.img-container__pag--one',
+        type: 'bullets',
+        bulletClass: 'img-container__pag-button',
+        bulletActiveClass: 'img-container__pag-button--active',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `<button class="${className}">
+                <span class="visually-hidden">Слайд ${index}</span>
+            </button>`;
+        }
+    },
+});
+
+const ProjectSwiperTwo = new Swiper('.containerTwo', {
+    slidesPerView: 1,
+    initialSlide: 0,
+    watchOverflow: true,
+    setWrapperSize: true,
+    spaceBetween: 30,
+    pagination: {
+        el: '.img-container__pag--two',
         type: 'bullets',
         bulletClass: 'img-container__pag-button',
         bulletActiveClass: 'img-container__pag-button--active',
         clickable: true,
         renderBullet: function (index, className) {
             console.log(className)
+            return `<button class="${className}">
+                <span class="visually-hidden">Слайд ${index}</span>
+            </button>`;
+        }
+    },
+});
+
+const ProjectSwiperThree = new Swiper('.containerThree', {
+    slidesPerView: 1,
+    initialSlide: 0,
+    watchOverflow: true,
+    setWrapperSize: true,
+    spaceBetween: 30,
+    pagination: {
+        el: '.img-container__pag--three',
+        type: 'bullets',
+        bulletClass: 'img-container__pag-button',
+        bulletActiveClass: 'img-container__pag-button--active',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `<button class="${className}">
+                <span class="visually-hidden">Слайд ${index}</span>
+            </button>`;
+        }
+    },
+});
+
+const ProjectSwiperFour = new Swiper('.containerFour', {
+    slidesPerView: 1,
+    initialSlide: 0,
+    watchOverflow: true,
+    setWrapperSize: true,
+    spaceBetween: 30,
+    pagination: {
+        el: '.img-container__pag--four',
+        type: 'bullets',
+        bulletClass: 'img-container__pag-button',
+        bulletActiveClass: 'img-container__pag-button--active',
+        clickable: true,
+        renderBullet: function (index, className) {
             return `<button class="${className}">
                 <span class="visually-hidden">Слайд ${index}</span>
             </button>`;
