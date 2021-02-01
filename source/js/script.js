@@ -1,7 +1,7 @@
 const App = Vue.createApp({
     data() {
         return {
-            isFormPopup: true,
+            isFormPopup: false,
             currentTab: 1,
             isMenuOpen: false
         }

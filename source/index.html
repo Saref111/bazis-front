@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg" href="favicon.svg" />
     <title>Базис-КР</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue@3.0.5"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body id="app">
@@ -20,7 +20,7 @@
                     </picture>
                 </a>
             </div>
-            <button class="header__menu-button" v-on:click="toggleMobileMenu" type="button">
+            <button class="header__menu-button" @click="toggleMobileMenu" type="button">
                 <span class="visually-hidden">Menu</span>
                 <svg class="header__menu-icn " :class="{ 'header__menu-icn--hidden':  isMenuOpen }" width="16" height="16">
                     <use xlink:href="img/sprite.svg#icn_Group1"></use>
@@ -32,13 +32,13 @@
             <nav class="header__nav nav" :class="{ 'nav--visible':  isMenuOpen }">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Услуги</a>
+                        <a href="#tabs" class="nav__link" @click="toggleMobileMenu">Услуги</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Проекты</a>
+                        <a href="#projects" class="nav__link" @click="toggleMobileMenu">Проекты</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">О компании</a>
+                        <a href="#about" class="nav__link" @click="toggleMobileMenu">О компании</a>
                     </li>
                 </ul>
                 <div class="owner-info">
@@ -87,7 +87,7 @@
             </div>
         </section>
         <section class="main__section tabs-section" :class="{ 'main__section--hidden' : isFormPopup }">
-            <div class="tabs-section__wrapper" id="tabs">
+            <div class="tabs-section__wrapper">
                 <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
                 <div class="tabs-section__tabs tabs">
                     <div class="tabs__slide-wrapper">
@@ -97,7 +97,7 @@
                         <button class="tabs__menu-button tabs__menu-button--next">
                             <span class="visually-hidden">Вперед</span>
                         </button>
-                        <ul class="tabs__menu swiper-wrapper">
+                        <ul class="tabs__menu swiper-wrapper"  id="tabs">
                             <li class="tabs__menu-item swiper-slide">
                                 <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Градостроительство</a>
                             </li>
@@ -186,7 +186,7 @@
                             </ul>
                         </li>        
                     </ul>
-                    <button class="button-blue button-blue--full">Получить консультацию</button>
+                    <a href="#" class="button-blue button-blue--full" @click="toggleForm">Получить консультацию</a>
                 </div>
             </div>
         </section>
@@ -213,11 +213,11 @@
                     </li>
                 </ul>
                 <p class="important-section__text">Предоставляем качественные услуги по проектной документации. <span class="orange orange--oneline">Мы более 7 лет на рынке!</span> Работая с нами, вы получите проект для любого вида строительства. Просто оформите заявку и ждите звонка нашего консультанта. Мы сделаем вам лучшее предложение!</p>
-                <button class="button-blue button-blue--arrow">Оформить заявку</button>
+                <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Оформить заявку</a>
             </div>
         </section>
         <section class="main__section ready-section" :class="{ 'main__section--hidden' : isFormPopup }">
-            <div class="ready-section__wrapper">
+            <div class="ready-section__wrapper" id="projects">
                 <h2 class="ready-section__title title">Готовые проекты</h2>
                 <ul class="ready-section__list">
                     <li class="ready-section__item project">
@@ -384,7 +384,7 @@
             </div>
         </section>
         <section class="main__section about-section" :class="{ 'main__section--hidden' : isFormPopup }">
-            <div class="about-section__wrapper">
+            <div class="about-section__wrapper" id="about">
                 <h2 class="about-section__title title">О компании</h2>
                 <p class="about-section__company"><span class="orange">Базис-КР</span> - компания профессиональных инженеров, влюбленных в свою работу. Мы более 7 лет на рынке. С первого дня мы приняли позицию - <span class="orange">не продавать любые решения, лишь бы заработать денег, а сделать качественные проекты, которыми могли бы гордится.</span></p>
                 <div class="about-section__results results">
@@ -452,17 +452,17 @@
                 <div class="contact-popup__tel-block tel-block">
                     <p class="tel-block__title">Свяжитесь с нами</p>
                     <span class="tel-block__label">Телефон</span>
-                    <a href="tel:380966185013">+38 096 618 50 13</a>
+                    <a class="tel-block__link" href="tel:380966185013">+38 096 618 50 13</a>
                     <p class="tel-block__footer">Оставьте заявку, и наш менеджер свяжется с вами в ближайшее время</p>
                 </div>
                 <form action="#" method="POST" class="contact-popup__contact-form contact-form">
-                    <p class="contact-form__legend">Нужна проектная документация без головной боли?
+                    <p class="contact-form__legend contact-form__legend--form-page">Нужна проектная документация без головной боли?
                         <span class="contact-form__legend">Оставьте заявку</span>
                     </p>
                     <input class="contact-form__input" type="text" name="name" id="full-form-name" placeholder="Ваше имя">
                     <input class="contact-form__input" type="tel" name="tel" id="full-form-tel" placeholder="Телефон">
                     <input class="contact-form__input" type="email" name="email" id="full-form-email" placeholder="E-mail">
-                    <textarea name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
+                    <textarea class="contact-form__input" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
                     <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
                     <p class="contact-form__confidence-policy confidence-policy">
                         Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
@@ -496,7 +496,7 @@
                         </a>
                     </p>
                 </div>
-                <button class="owner-info__submit-button button-blue" type="submit">Оставить заявку</button>
+                <button class="owner-info__submit-button button-blue" type="button" @click="toggleForm" >{{ !isFormPopup ? 'Оставить заявку' : 'Вернуться на главную' }}</button>
                 <p class="owner-info__confidence-policy confidence-policy">
                     <a href="#" class="confidence-policy__link">Политика конфиденциальности</a>
                 </p>

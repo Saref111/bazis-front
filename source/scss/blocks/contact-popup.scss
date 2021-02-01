@@ -1,7 +1,49 @@
 .contact-popup {
     display: none;
+    width: 100%;
+
+    &::before {
+        position: absolute;
+        content: "Базис-КР";
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 144px;
+        line-height: 172px;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        color: #fff;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(48, 48, 48, 0.2);
+        white-space: nowrap;
+        display: block;
+        top: 100px;
+        left: -10px;
+        width: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
 
     &--shown {
         display: block;
     }
+
+    &__wrapper {
+        width: 100%;
+        padding: 15px;
+        padding-top: 50px;
+    }
+
+    &__title {
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #303030;
+        margin-bottom: 70px;
+    }
+
+    
 }

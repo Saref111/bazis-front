@@ -1,0 +1,25 @@
+.orange-label {
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 14px;
+    font-family: SF Pro Display, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #FF7800;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #FF7800;
+        border-radius: 50%;
+        top: 3px;
+        left: 0;
+    }
+}

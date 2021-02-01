@@ -22,6 +22,7 @@
         display: block;
         margin-left: auto;
         position: relative;
+        max-width: 225px;
 
         &::before {
             position: absolute;

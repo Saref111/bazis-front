@@ -10,6 +10,10 @@
         color: #828282;
         margin: 0;
         margin-bottom: 25px;
+
+        &--form-page {
+            display: none;
+        }
     }
 
     &__legend-bold {
