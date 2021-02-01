@@ -35,3 +35,15 @@
         }
     }
 }
+
+@media (min-width: 768px) {
+    .about-section {
+        &__company {
+            padding-top: 250px;
+            background-image: url('../img/maket.png'), url('../img/company.png');
+            background-repeat: no-repeat;
+            background-position: 25% 10%, center 0;
+            background-size: 195px 220px, 345px 183px;
+        }
+    }
+}

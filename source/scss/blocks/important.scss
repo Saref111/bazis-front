@@ -100,3 +100,14 @@
     }
 
 }
+
+
+
+@media (min-width: 768px) {
+    .important {
+        padding: 0;
+        padding-left: 50%;
+
+        background-position: 5% center, 30% 45%;
+    }
+}

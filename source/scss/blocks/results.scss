@@ -12,8 +12,6 @@
 
     &__list {
         @include list-reset;
-
-
     }
 
     &__item {
@@ -45,7 +43,21 @@
         font-size: 64px;
         line-height: 76px;
         padding-right: 15px;
-
         color: #000000;
+    }
+}
+
+@media (min-width: 768px) {
+    .results {
+        display: flex;
+        justify-content: space-between;
+
+        &__text {
+            width: 45%;
+        }
+
+        &__list {
+            width: 45%;
+        }
     }
 }
