@@ -1,3 +1,7 @@
 .contact-popup {
     display: none;
+
+    &--shown {
+        display: block;
+    }
 }

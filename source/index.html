@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-<body>
+<body id="app">
     <header id="navigation" class="header">
         <div class="header__wrapper">
             <div class="header__logo logo">
@@ -65,7 +65,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="main__section welcome-section">
+        <section class="main__section welcome-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="welcome-section__wrapper">
                 <h1 class="welcome-section__title title title--main">
                     <span class="title__company-name">Базис-КР</span>
@@ -86,7 +86,7 @@
                 </form>
             </div>
         </section>
-        <section class="main__section tabs-section">
+        <section class="main__section tabs-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="tabs-section__wrapper" id="tabs">
                 <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
                 <div class="tabs-section__tabs tabs">
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__section important-section">
+        <section class="main__section important-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="important-section__wrapper">
                 <h2 class="important-section__title title">Мы понимаем, что для вас важно</h2>
                 <ul class="important-section__list important">
@@ -216,7 +216,7 @@
                 <button class="button-blue button-blue--arrow">Оформить заявку</button>
             </div>
         </section>
-        <section class="main__section ready-section">
+        <section class="main__section ready-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="ready-section__wrapper">
                 <h2 class="ready-section__title title">Готовые проекты</h2>
                 <ul class="ready-section__list">
@@ -383,7 +383,7 @@
                 </ul>
             </div>
         </section>
-        <section class="main__section about-section">
+        <section class="main__section about-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="about-section__wrapper">
                 <h2 class="about-section__title title">О компании</h2>
                 <p class="about-section__company"><span class="orange">Базис-КР</span> - компания профессиональных инженеров, влюбленных в свою работу. Мы более 7 лет на рынке. С первого дня мы приняли позицию - <span class="orange">не продавать любые решения, лишь бы заработать денег, а сделать качественные проекты, которыми могли бы гордится.</span></p>
@@ -411,7 +411,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__section reviews-section">
+        <section class="main__section reviews-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="reviews-section__wrapper">
                 <h2 class="reviews-section__title title">
                     О нас говорят
@@ -442,7 +442,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__popup contact-popup">
+        <section class="main__popup contact-popup" :class="{ 'contact-popup--shown' : isFormPopup }" >
             <div class="contact-popup__wrapper">
                 <h2 class="contact-popup__title title">
                     <span class="title__line">Дайте нам знать</span>

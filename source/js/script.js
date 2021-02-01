@@ -1,37 +1,28 @@
-
-const NavigationComponent = {
+const App = Vue.createApp({
     data() {
         return {
+            isFormPopup: true,
+            currentTab: 1,
             isMenuOpen: false
         }
     },
     methods: {
+        toggleForm() {
+            this.isFormPopup = !this.isFormPopup
+        },
         toggleMobileMenu() {
             this.isMenuOpen = !this.isMenuOpen
-        }
-    }
-}
-
-const TabsComponent = {
-    data() {
-        return {
-            currentTab: 1,
-        }
-    },
-    methods: {
+        },
         isCurrent(id) {
             return id === this.currentTab
         },
         setCurrent(id) {
             return this.currentTab = id
         }
-    }
-}
+    },
+}).mount('#app')
 
 
-
-Vue.createApp(NavigationComponent).mount('#navigation')
-Vue.createApp(TabsComponent).mount('#tabs')
 const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     setWrapperSize: true,
     spaceBetween: 0,
@@ -39,6 +30,7 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     initialSlide: 1,
     watchOverflow: false,
 });
+
 const ProjectSwiperOne = new Swiper('.containerOne', {
     slidesPerView: 1,
     initialSlide: 0,

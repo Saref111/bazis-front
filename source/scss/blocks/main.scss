@@ -1,5 +1,9 @@
 .main {
     width: 100%;
 
-    
+    &__section {
+        &--hidden {
+            display: none;
+        }
+    }
 }
