@@ -125,3 +125,11 @@
         width: 100%;
     }
 }
+
+@media (min-width: 768px) {
+    .tabs {
+        &__menu {
+            padding-left: 33px;
+        }
+    }
+}

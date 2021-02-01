@@ -34,3 +34,19 @@
         padding: 0 15px;
     }
 }
+
+@media (min-width: 768px) {
+    .welcome-section {
+        &__wrapper {
+            padding-right: 50%;
+            background-image: url("../img/Photo-mobile.png");
+            background-repeat: no-repeat;
+            background-position-y: 40px;
+            background-position-x: 95%;
+
+            &::before {
+                z-index: -1;
+            }
+        }
+    }
+}

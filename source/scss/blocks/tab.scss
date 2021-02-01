@@ -6,7 +6,7 @@
     &:nth-child(1) {
         background-image: url("../img/town-mobile.jpg"), url("../img/town-mobile2.jpg");
         background-repeat: no-repeat;
-        background-position: 0 27px,193px 27px;
+        background-position: left 27px, right  27px;
     }
     &:nth-child(2) {
         background-image: url("../img/scale-mobile.jpg"), url("../img/tap-mobile.jpg");
@@ -90,5 +90,33 @@
         line-height: 22px;
         color: #303030;
         margin: 0;
+    }
+}
+
+@media (min-width: 500px) {
+    .tab {
+        &:nth-child(1),
+        &:nth-child(2) {
+            background-position: 20% 27px, 85%  27px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .tab {
+        padding-top: 300px;
+        &:nth-child(1) {
+            background-image: url("../img/town.jpg"), url("../img/town2.jpg");
+            background-position: 6% 27px, 94%  27px;
+            background-size: 400px, 300px;
+        }
+        &:nth-child(2) {
+            background-image: url("../img/tap.png"), url("../img/scale.png") ;
+            background-position: 15% 15px, 79%  17px;
+            background-size: 300px, 300px;
+        }
+        &:nth-child(3) {
+            background-image: url("../img/safe.jpg");
+        }
     }
 }

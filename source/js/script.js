@@ -29,6 +29,12 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     slidesPerView: 1.16,
     initialSlide: 1,
     watchOverflow: false,
+    breakpoints: {
+        768: {
+            spaceBetween: 50,
+            slidesPerView: 'auto',
+        }
+    }
 });
 
 const ProjectSwiperOne = new Swiper('.containerOne', {
