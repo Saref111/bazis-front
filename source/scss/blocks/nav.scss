@@ -77,3 +77,16 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .nav {
+        & .owner-info {
+            margin-top: 13px;
+        }
+
+        &__list {
+            align-items: center;
+            padding-right: 88px;
+        }
+    }
+}
