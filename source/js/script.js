@@ -33,7 +33,11 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
         768: {
             spaceBetween: 50,
             slidesPerView: 'auto',
-        }
+        },
+        1600: {
+            slidesPerView: 3,
+            init: false
+        },
     }
 });
 

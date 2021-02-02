@@ -48,3 +48,12 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .button-blue {
+        &--full {
+            margin-left: 50%;
+            max-width: 282px;
+        }
+    }
+}

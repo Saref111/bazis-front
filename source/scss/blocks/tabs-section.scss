@@ -32,3 +32,18 @@
         }
     }
 }
+@media (min-width: 1600px) {
+    .tabs-section {
+        &__wrapper {
+            padding: 0 130px;
+        }
+        &__title {
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 43px;
+            margin-bottom: 80px;    
+        }
+    }
+}

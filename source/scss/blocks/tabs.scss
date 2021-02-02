@@ -133,3 +133,42 @@
         }
     }
 }
+@media (min-width: 1600px) {
+    .tabs {
+        &__menu {
+            padding-top: 43px;
+            padding-left: 0;
+        }
+
+        &__menu-item {
+            &:nth-child(1) a.tabs__link--active::after {
+                top: -52px;
+            }
+            &:nth-child(3) a.tabs__link--active::after {
+                top: -52px;
+            }
+        }
+
+        &__link {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 140%;
+            text-align: center;
+
+            &--active {
+                &::after {
+                    font-weight: 600;
+                    font-size: 104px;
+                    line-height: 140%;
+                    top: -42px;
+                    left: 33%;
+                }
+
+                &::before {
+                    background-color: transparent;
+                }
+            }
+
+        }
+    }
+}

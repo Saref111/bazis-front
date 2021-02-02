@@ -120,3 +120,42 @@
         }
     }
 }
+@media (min-width: 1600px) {
+    .tab {
+        padding-top: 92px;
+        &:nth-child(1) {
+            background-image:  url("../img/town2.jpg");
+            background-position: 212px 42px;
+            background-size: 300px, 350px;
+        }
+        &:nth-child(2) {
+            background-image: url("../img/tap.png"), url("../img/scale.png") ;
+            background-position: 280px 380px, 80px 180px;
+            background-size: 300px, 350px;
+        }
+        &:nth-child(3) {
+            background-position: 95px 116px;
+        }
+
+        &__features-list {
+            margin-left: 50%;
+        }
+
+        &__features-item {
+            margin-bottom: 43px;
+        }
+
+        &__item-title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 16px;
+        }
+
+        &__item-description {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
