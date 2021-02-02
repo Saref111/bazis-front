@@ -55,5 +55,12 @@
             margin-left: 50%;
             max-width: 282px;
         }
+        &--arrow {
+            margin-right: 674px;
+
+            &::before {
+                left: -61px;
+            }
+        }
     }
 }

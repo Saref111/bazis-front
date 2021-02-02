@@ -37,3 +37,23 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .important-section {
+        &__text {
+            max-width: 1000px;
+            margin-left: auto;
+            padding-right: 106px;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 140%;
+
+            & .orange {
+                font-style: italic;
+                font-size: 26px;
+            }
+
+            
+        }
+    }
+}
