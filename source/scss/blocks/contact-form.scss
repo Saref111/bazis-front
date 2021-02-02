@@ -54,3 +54,31 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .contact-form {
+        &__legend {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 42px;
+        }
+
+        &__legend-bold {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            color: #303030;
+            margin-top: 10px;
+        }
+
+        &__input {
+            padding-left: 80px;
+            
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
+        }
+
+    }
+}

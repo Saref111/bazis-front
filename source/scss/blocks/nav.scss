@@ -86,7 +86,24 @@
 
         &__list {
             align-items: center;
+            width: 300px;
+        }
+    }
+}
+@media (min-width: 1363px) {
+    .nav {
+        &__list {
+            align-items: center;
+            padding-right: 5%;
+        }
+    }
+}
+@media (min-width: 1600px) {
+    .nav {
+        &__list {
+            align-items: center;
             padding-right: 88px;
+            width: 370px;
         }
     }
 }

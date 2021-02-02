@@ -45,3 +45,29 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .title {
+        &--main {
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 43px;
+            width: 560px;
+            margin-top: 73px;
+            transform: translateX(27px);
+            margin-left: 119px;
+
+            & .orange {
+                margin-left: -85px;
+            }
+        }
+
+        &__company-name {
+            left: -46px;
+            top: 5px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

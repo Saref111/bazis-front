@@ -33,6 +33,17 @@
         padding: 0;
         padding: 0 15px;
     }
+
+    &__arrow {
+        display: none;
+        font-family: SF Pro Display, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #828282;
+        transform: rotate(90deg);
+    }
 }
 
 @media (min-width: 768px) {
@@ -46,6 +57,57 @@
 
             &::before {
                 z-index: -1;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .welcome-section {
+        padding-top: 0;
+        position: relative;
+        &__wrapper {
+            padding-bottom: 266px;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-top: 67px;
+            padding-right: 50%;
+            background-image: url("../img/Photo.png");
+            background-repeat: no-repeat;
+            background-position-y: 51px;
+            background-position-x: 91.15%;
+
+            &::before {
+                font-weight: 600;
+                font-size: 471.44px;
+                height: 563px;
+                top: 81px;
+                left: -57px;
+                line-height: 350px;
+            }
+        }
+
+        &__contact-form {
+            max-width: 564px;
+            margin-left: 86px;
+            margin-top: 130px;
+        }
+
+        &__arrow {
+            display: block;
+            position: absolute;
+            right: 63px;
+            bottom: 355px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 40px;
+                height: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M39.3536 4.35355C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464466C35.9763 0.269204 35.6597 0.269204 35.4645 0.464466C35.2692 0.659728 35.2692 0.976311 35.4645 1.17157L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53553C35.6597 7.7308 35.9763 7.7308 36.1716 7.53553L39.3536 4.35355ZM0 4.5H39V3.5H0V4.5Z' fill='%23828282'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                top: 3px;
+                left: 109px;
             }
         }
     }
