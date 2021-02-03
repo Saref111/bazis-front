@@ -127,6 +127,9 @@ const ReviewsSwiper = new Swiper('.reviews', {
     breakpoints: {
         768: {
             slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 'auto',
         }
     }
 })

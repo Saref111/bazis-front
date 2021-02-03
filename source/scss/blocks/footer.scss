@@ -35,3 +35,22 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .footer {
+        padding-left: 100px;
+        padding-right: 100px;
+        &__logo-text {
+            font-weight: 600;
+            font-size: 139px;
+            line-height: 90%;
+            margin-top: 12px;
+        }
+
+        & .owner-info {
+            max-width: 350px;
+            margin: 0;
+            margin-left: auto;
+        }
+    }
+}
