@@ -33,9 +33,9 @@
     }
 }
 @media (min-width: 1600px) {
-    .tabs-section {
+    .tabs-section {;
         &__wrapper {
-            padding: 0 130px;
+            padding: 0 100px;
         }
         &__title {
             font-family: SF Pro Display;
