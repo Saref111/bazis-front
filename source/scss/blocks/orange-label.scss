@@ -10,7 +10,6 @@
     line-height: 12px;
     text-transform: uppercase;
     color: #FF7800;
-    position: relative;
 
     &::before {
         position: absolute;
@@ -21,5 +20,15 @@
         border-radius: 50%;
         top: 3px;
         left: 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .orange-label {
+        &--form {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+        }
     }
 }
