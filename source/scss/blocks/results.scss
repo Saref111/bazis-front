@@ -61,3 +61,36 @@
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .results {
+        flex-direction: column;
+        max-width: 50%;
+        width: 700px;
+        margin-left: auto;
+
+        &__text {
+            width: 100%;
+        }
+
+        &__list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 50%;
+            &:last-child {
+    
+                &::after {
+                    width: 0;
+                    height: 0;
+                    bottom: 0;
+                    left: unset;
+                }
+            }
+        }
+    }
+}

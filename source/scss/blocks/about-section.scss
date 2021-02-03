@@ -50,6 +50,35 @@
 
 @media (min-width: 1600px) {
     .about-section {
+        width: 100%;
+        padding-top: 0;
+        background-image: linear-gradient(#FDF9F3 0, #FDF9F3 444px, white 444px, white 100%);
         
+        &__wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 100px;
+            display: flex;
+            flex-wrap: wrap;
+
+            background-image: url('../img/maket.png'), url('../img/company.png');
+            background-repeat: no-repeat;
+            background-position: 100px 223px, right 100px top 123px;
+        }
+
+        &__title {
+            margin-bottom: 760px;
+            width: 100%;
+        }
+
+        &__company {
+            background-image: none;
+            max-width: 580px;
+            padding-top: 0;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 36px;
+            margin-top: 130px;
+        }
     }
 }
