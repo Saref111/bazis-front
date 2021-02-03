@@ -35,6 +35,8 @@
 @media (min-width: 1600px) {
     .tabs-section {
         &__wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
             padding: 0 100px;
         }
         &__title {

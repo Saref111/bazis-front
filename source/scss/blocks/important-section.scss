@@ -41,6 +41,8 @@
 @media (min-width: 1600px) {
     .important-section {
         &__wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
             padding-left: 100px;
             padding-right: 100px;
         }
