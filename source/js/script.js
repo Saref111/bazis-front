@@ -29,12 +29,12 @@ const App = Vue.createApp({
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: {
+                body: JSON.stringify({
                     clientName: this.clientName,
                     clientPhoneNumber: this.clientPhoneNumber,
                     clientEmail: this.clientEmail,
                     clientMessage: this.clientMessage,
-                },
+                }),
             })
         }
     },
