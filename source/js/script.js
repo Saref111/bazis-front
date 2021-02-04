@@ -3,7 +3,11 @@ const App = Vue.createApp({
         return {
             isFormPopup: false,
             currentTab: 1,
-            isMenuOpen: false
+            isMenuOpen: false,
+            clientName: '',
+            clientPhoneNumber: '',
+            clientEmail: '',
+            clientMessage: '',
         }
     },
     methods: {
@@ -18,6 +22,20 @@ const App = Vue.createApp({
         },
         setCurrent(id) {
             return this.currentTab = id
+        },
+        sendForm() {
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: {
+                    clientName: this.clientName,
+                    clientPhoneNumber: this.clientPhoneNumber,
+                    clientEmail: this.clientEmail,
+                    clientMessage: this.clientMessage,
+                },
+            })
         }
     },
 }).mount('#app')

@@ -73,12 +73,12 @@
                     <span class="orange">гражданского и промышленного</span>
                     назначения
                 </h1>
-                <form action="#" method="POST" class="welcome-section__contact-form contact-form">
+                <form action="/submit" @submit.prevent="sendForm" method="POST" class="welcome-section__contact-form contact-form">
                     <p class="contact-form__legend">Нужна проектная документация без головной боли?
                         <span class="contact-form__legend-bold">Оставьте заявку</span>
                     </p>
-                    <input class="contact-form__input" type="text" name="name" id="name" placeholder="Ваше имя">
-                    <input class="contact-form__input" type="tel" name="tel" id="tel" placeholder="Телефон">
+                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше имя">
+                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон">
                     <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
                     <p class="contact-form__confidence-policy confidence-policy">
                         Нажимая на кнопку, вы соглашаетесь <br> с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
@@ -456,14 +456,14 @@
                     <a class="tel-block__link" href="tel:380966185013">+38 096 618 50 13</a>
                     <p class="tel-block__footer">Оставьте заявку, и наш менеджер свяжется с вами в ближайшее время</p>
                 </div>
-                <form action="#" method="POST" class="contact-popup__contact-form contact-form">
+                <form action="/submit" @submit.prevent="sendForm" method="POST" class="contact-popup__contact-form contact-form">
                     <p class="contact-form__legend contact-form__legend--form-page">Нужна проектная документация без головной боли?
                         <span class="contact-form__legend">Оставьте заявку</span>
                     </p>
-                    <input class="contact-form__input" type="text" name="name" id="full-form-name" placeholder="Ваше имя">
-                    <input class="contact-form__input" type="tel" name="tel" id="full-form-tel" placeholder="Телефон">
-                    <input class="contact-form__input" type="email" name="email" id="full-form-email" placeholder="E-mail">
-                    <textarea class="contact-form__input" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
+                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="full-form-name" placeholder="Ваше имя">
+                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="full-form-tel" placeholder="Телефон">
+                    <input class="contact-form__input" v-model="clientEmail" type="email" name="email" id="full-form-email" placeholder="E-mail">
+                    <textarea class="contact-form__input" v-model="clientMessage" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
                     <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
                     <p class="contact-form__confidence-policy confidence-policy">
                         Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
