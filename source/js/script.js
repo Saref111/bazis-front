@@ -148,6 +148,10 @@ const ReviewsSwiper = new Swiper('.reviews', {
         },
         1024: {
             slidesPerView: 'auto',
+            navigation: {
+                prevEl: '.reviews__button--prev',
+                nextEl: '.reviews__button--next'
+            }
         }
     }
 })
