@@ -79,13 +79,16 @@
             background-position-x: 91.15%;
 
             &::before {
+                width: 88vw;
                 font-weight: 600;
-                font-size: 471.44px;
+                font-size: 340px;
+                line-height: 406px;
                 height: 563px;
                 top: 81px;
-                left: -57px;
+                left: 50%;
+                transform: translateX(-50%);
                 line-height: 350px;
-                overflow: visible;
+                overflow: hidden;
             }
         }
 

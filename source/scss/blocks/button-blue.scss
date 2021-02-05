@@ -13,6 +13,15 @@
     text-transform: uppercase;
     color: #FFFFFF;
 
+    &:hover,
+    &:focus {
+        background-color: #FF7800;
+    }
+
+    &:active {
+        background-color: #CCBFB6;
+    }
+
     &--full {
         display: block;
         width: 100%;

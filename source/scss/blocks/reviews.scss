@@ -18,8 +18,11 @@
         min-width: 330px;
         background: #FFFFFF;
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
-
         padding: 30px 24px;
+
+        &:hover {
+            outline: 1px solid #FF7800;
+        }
     }
 
     &__review {
@@ -63,6 +66,15 @@
 
             &--next {
                 transform: rotateY(180deg);
+            }
+
+            &:hover,
+            &:focus {
+                background-color: #FF7800;
+            }
+
+            &:active {
+                background-color: #CCBFB6;
             }
         }
     }

@@ -77,6 +77,11 @@
         cursor: pointer;
         width: 100%;
 
+        &:hover,
+        &:focus {
+            color: #FF7800;
+        }
+        
         &::after {
             position: absolute;
             font-family: SF Pro Display, sans-serif;
@@ -92,11 +97,16 @@
             text-align: center;
             z-index: -1;
         }
-
+        
         &--active {
             color: #3029DB;
             position: relative;
-
+            
+            &:hover,
+            &:focus {
+                color: #3029DB;
+            }
+            
             &::before {
                 position: absolute;
                 content: "";

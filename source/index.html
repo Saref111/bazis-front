@@ -78,8 +78,8 @@
                         <span class="contact-form__legend-bold">Оставьте заявку</span>
                     </p>
                     <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше имя">
-                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон">
-                    <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
+                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+                    <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
                     <p class="contact-form__confidence-policy confidence-policy">
                         Нажимая на кнопку, вы соглашаетесь <br> с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
                     </p>
@@ -469,10 +469,10 @@
                         <span class="contact-form__legend">Оставьте заявку</span>
                     </p>
                     <input class="contact-form__input" v-model="clientName" type="text" name="name" id="full-form-name" placeholder="Ваше имя">
-                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="full-form-tel" placeholder="Телефон">
+                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="full-form-tel" placeholder="Телефон" required>
                     <input class="contact-form__input" v-model="clientEmail" type="email" name="email" id="full-form-email" placeholder="E-mail">
                     <textarea class="contact-form__input" v-model="clientMessage" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
-                    <button class="contact-form__submit-button button-blue" type="submit">Оставить заявку</button>
+                    <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
                     <p class="contact-form__confidence-policy confidence-policy">
                         Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
                     </p>

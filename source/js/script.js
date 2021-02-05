@@ -8,6 +8,8 @@ const App = Vue.createApp({
             clientPhoneNumber: '',
             clientEmail: '',
             clientMessage: '',
+            formHasBeenSent: false,
+            formHasNotBeenSent: false,
         }
     },
     methods: {
@@ -16,6 +18,13 @@ const App = Vue.createApp({
         },
         toggleMobileMenu() {
             this.isMenuOpen = !this.isMenuOpen
+
+            if (this.isFormPopup) {
+                this.closeFormPopup()
+            }
+        },
+        closeFormPopup() {
+            this.isFormPopup = false
         },
         isCurrent(id) {
             return id === this.currentTab
@@ -35,8 +44,21 @@ const App = Vue.createApp({
                     clientEmail: this.clientEmail,
                     clientMessage: this.clientMessage,
                 }),
-            })
-        }
+            }).then((res) => {
+                if (res.status === 200) {
+                    this.successHandler()
+                } else {
+                    this.errorHandler()
+                }
+            }, this.errorHandler)
+        },
+        successHandler(res) {
+            console.log(res)
+            this.formHasBeenSent = true
+        },
+        errorHandler() {
+            this.formHasNotBeenSent = true
+        },
     },
 }).mount('#app')
 

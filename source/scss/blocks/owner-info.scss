@@ -85,6 +85,17 @@
                 left: 0;
                 bottom: -4px;
             }
+
+            &:hover,
+            &:focus {
+                color: #FF7800;
+            }
+            
+            &:active {
+                color: #FF7800;
+                
+                opacity: 0.5;
+            }
         }
     }
 
