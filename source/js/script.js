@@ -61,7 +61,7 @@ const App = Vue.createApp({
         },
         setLanguage(e) {
             document.cookie = 'lang=' + e.target.value
-            fetch('/')
+            location.reload()
         }
     },
 }).mount('#app')
