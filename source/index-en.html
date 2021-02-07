@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,12 @@
                 <a href="/" class="logo__link">
                     <picture>
                         <source type="image/webp" srcset="img/Logo1.png 1x, img/Logo1@2x.png 2x">
-                        <img src="img/Logo1.png" alt="Логотип Базис-КР" srcset="img/Logo1@2x.png 2x" width="138" height="56">
+                        <img src="img/Logo1.png" alt="Bazis-KR logo" srcset="img/Logo1@2x.png 2x" width="138" height="56">
                     </picture>
                 </a>
             </div>
             <button class="header__menu-button" @click="toggleMobileMenu" type="button">
-                <span class="visually-hidden">Меню</span>
+                <span class="visually-hidden">Menu</span>
                 <svg class="header__menu-icn " :class="{ 'header__menu-icn--hidden':  isMenuOpen }" width="16" height="16">
                     <use xlink:href="img/sprite.svg#icn_Group1"></use>
                 </svg>
@@ -32,26 +32,26 @@
             <nav class="header__nav nav" :class="{ 'nav--visible':  isMenuOpen }">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#tabs" class="nav__link" @click="toggleMobileMenu">Услуги</a>
+                        <a href="#tabs" class="nav__link" @click="toggleMobileMenu">Services</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#projects" class="nav__link" @click="toggleMobileMenu">Проекты</a>
+                        <a href="#projects" class="nav__link" @click="toggleMobileMenu">Projects</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#about" class="nav__link" @click="toggleMobileMenu">О компании</a>
+                        <a href="#about" class="nav__link" @click="toggleMobileMenu">About company</a>
                     </li>
                 </ul>
                 <div class="owner-info">
                     <div class="owner-info__avatar">
                         <picture>
                             <source type="image/webp" srcset="img/Ellipse1.webp 1x, img/Ellipse1@2x.webp 2x">
-                            <img src="img/Ellipse1.png" alt="Цидуля Павел Александрович" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
+                            <img src="img/Ellipse1.png" alt="Pavlo Tsidulia" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
                         </picture>
                     </div>
                     <div class="owner-info__text">
-                        <p class="owner-info__name">Цидуля Павел Александрович</p>
+                        <p class="owner-info__name">Pavlo Tsidulia</p>
                         <p class="owner-info__phone">
-                            <span class="owner-info__post">Директор</span>
+                            <span class="owner-info__post">Director</span>
                             <a href="tel:+380966185013" class="owner-info__phone-link">
                                 <svg class="owner-info__phone-icn" width="16" height="16">
                                     <use xlink:href="img/sprite.svg#icn_Frame-2"></use>
@@ -68,45 +68,45 @@
         <section class="main__section welcome-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="welcome-section__wrapper">
                 <h1 class="welcome-section__title title title--main">
-                    <span class="title__company-name">Базис-КР</span>
-                    Разработка проектной документации объектов
-                    <span class="orange">гражданского и промышленного</span>
-                    назначения
+                    <span class="title__company-name">Bazis-KR</span>
+                    Development of design documentation
+                    <span class="orange">for civil and industrial</span>
+                    facilities
                 </h1>
                 <form action="/submit" @submit.prevent="sendForm" method="POST" class="welcome-section__contact-form contact-form">
-                    <p class="contact-form__legend">Нужна проектная документация без головной боли?
-                        <span class="contact-form__legend-bold">Оставьте заявку</span>
+                    <p class="contact-form__legend">Need project documentation without headaches?
+                        <span class="contact-form__legend-bold">Leave a request</span>
                     </p>
-                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше имя">
-                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон" required>
-                    <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
+                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Your name">
+                    <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Phone" required>
+                    <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Leave a request' : formHasBeenSent ? 'Successfully sent' : formHasNotBeenSent ? 'Not sent' : '' }}</button>
                     <p class="contact-form__confidence-policy confidence-policy">
-                        Нажимая на кнопку, вы соглашаетесь <br> с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
+                        By clicking the button, you agree <br> with <a href="#" class="confidence-policy__link">Confidence Policy</a>
                     </p>
                 </form>
-                <span class="welcome-section__arrow">Листать далее</span>
+                <span class="welcome-section__arrow">Scroll further</span>
             </div>
         </section>
         <section class="main__section tabs-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="tabs-section__wrapper">
-                <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
+                <h2 class="tabs-section__title title">Turnkey project documentation <br> of any complexity</h2>
                 <div class="tabs-section__tabs tabs">
                     <div class="tabs__slide-wrapper">
                         <button class="tabs__menu-button tabs__menu-button--prev">
-                            <span class="visually-hidden">Назад</span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="tabs__menu-button tabs__menu-button--next">
-                            <span class="visually-hidden">Вперед</span>
+                            <span class="visually-hidden">Next</span>
                         </button>
                         <ul class="tabs__menu swiper-wrapper"  id="tabs">
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Градостроительство</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Urban planning</a>
                             </li>
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }"  @click="setCurrent(1)">Инженерное обеспечение зданий <br> и сооружений</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }"  @click="setCurrent(1)">Engineering support of buildings <br> and structures</a>
                             </li>
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }"  @click="setCurrent(2)">Безопасность</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }"  @click="setCurrent(2)">Safety</a>
                             </li>
                         </ul>
                     </div class="tabs__slide-wrapper">
@@ -428,16 +428,16 @@
                             <cite class="reviews__author">Администрация школы №58</cite>
                         </li>
                         <li class="reviews__item swiper-slide">
-                            <blockquote class="reviews__review">ООО «МАКТОП» сотрудничало с ООО «БАЗИС-КР»
-                                выполнение работ на разработку проектной документации (стадия
-                                «Рабочий проект») «Строительство торгово-офисного здания и гаража
-                                со встроенными бытовыми помещениями ».
-                                В результате работа была выполнена профессионально и в
-                                установленный срок.
-                                планируем и дальше поддерживать деловые контакты с ООО
-                                КР », которые всегда придерживаются лояльного и индивидуального
-                                подхода к заказчику.</blockquote>
-                            <cite class="reviews__author">М. Земляк Директор ООО «МАКТОП»</cite>
+                            <blockquote class="reviews__review">ТОВ «МАКТОП» співпрацювало з ТОВ «БАЗИС-КР» 
+                                у виконанні робіт на розробку проектної документації (стадія 
+                                «Робочий проект») «Будівництво торгово-офісної будівлі та гаражу 
+                                з вбудованими побутовими приміщеннями». 
+                                В результаті робота була виконана професійно і в 
+                                установлений строк. 
+                                плануємо і далі підтримувати ділові контакти з ТОВ 
+                                КР», які завжди дотримуються лояльного і індивідуального 
+                                підходу до замовника.</blockquote>
+                            <cite class="reviews__author">М. Земляк Директор ТОВ «МАКТОП»</cite>
                         </li>
                         <li class="reviews__item swiper-slide">
                             <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>

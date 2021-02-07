@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,24 +32,24 @@
             <nav class="header__nav nav" :class="{ 'nav--visible':  isMenuOpen }">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#tabs" class="nav__link" @click="toggleMobileMenu">Услуги</a>
+                        <a href="#tabs" class="nav__link" @click="toggleMobileMenu">Послуги</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#projects" class="nav__link" @click="toggleMobileMenu">Проекты</a>
+                        <a href="#projects" class="nav__link" @click="toggleMobileMenu">Проекти</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#about" class="nav__link" @click="toggleMobileMenu">О компании</a>
+                        <a href="#about" class="nav__link" @click="toggleMobileMenu">Про компанію</a>
                     </li>
                 </ul>
                 <div class="owner-info">
                     <div class="owner-info__avatar">
                         <picture>
                             <source type="image/webp" srcset="img/Ellipse1.webp 1x, img/Ellipse1@2x.webp 2x">
-                            <img src="img/Ellipse1.png" alt="Цидуля Павел Александрович" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
+                            <img src="img/Ellipse1.png" alt="Цидуля Павло Олександрович" srcset="img/Ellipse1@2x.png 2x" width="56" height="56">
                         </picture>
                     </div>
                     <div class="owner-info__text">
-                        <p class="owner-info__name">Цидуля Павел Александрович</p>
+                        <p class="owner-info__name">Цидуля Павло Олександрович</p>
                         <p class="owner-info__phone">
                             <span class="owner-info__post">Директор</span>
                             <a href="tel:+380966185013" class="owner-info__phone-link">
@@ -69,27 +69,27 @@
             <div class="welcome-section__wrapper">
                 <h1 class="welcome-section__title title title--main">
                     <span class="title__company-name">Базис-КР</span>
-                    Разработка проектной документации объектов
-                    <span class="orange">гражданского и промышленного</span>
-                    назначения
+                    Розробка проектної документації об'єктів
+                    <span class="orange">цивільного та промислового</span>
+                    призначення
                 </h1>
                 <form action="/submit" @submit.prevent="sendForm" method="POST" class="welcome-section__contact-form contact-form">
-                    <p class="contact-form__legend">Нужна проектная документация без головной боли?
-                        <span class="contact-form__legend-bold">Оставьте заявку</span>
+                    <p class="contact-form__legend">Потрібна проектна документація без головного болю?
+                        <span class="contact-form__legend-bold">Залиште заявку</span>
                     </p>
-                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше имя">
+                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше ім'я">
                     <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон" required>
                     <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
                     <p class="contact-form__confidence-policy confidence-policy">
-                        Нажимая на кнопку, вы соглашаетесь <br> с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
+                        Натискаючи на кнопку, ви погоджуєтеся <br> із <a href="#" class="confidence-policy__link">Політикою конфіденційності</a>
                     </p>
                 </form>
-                <span class="welcome-section__arrow">Листать далее</span>
+                <span class="welcome-section__arrow">Гортати далі</span>
             </div>
         </section>
         <section class="main__section tabs-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="tabs-section__wrapper">
-                <h2 class="tabs-section__title title">Проектная документация <br> любой сложности под ключ</h2>
+                <h2 class="tabs-section__title title">Проектна документація<br> будь-якої складності під ключ</h2>
                 <div class="tabs-section__tabs tabs">
                     <div class="tabs__slide-wrapper">
                         <button class="tabs__menu-button tabs__menu-button--prev">
@@ -100,126 +100,126 @@
                         </button>
                         <ul class="tabs__menu swiper-wrapper"  id="tabs">
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Градостроительство</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(0) }"  @click="setCurrent(0)">Містобудування</a>
                             </li>
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }"  @click="setCurrent(1)">Инженерное обеспечение зданий <br> и сооружений</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(1) }"  @click="setCurrent(1)">Інженерне забезпечення будівель <br> та споруд</a>
                             </li>
                             <li class="tabs__menu-item swiper-slide">
-                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }"  @click="setCurrent(2)">Безопасность</a>
+                                <a class="tabs__link" :class="{ 'tabs__link--active' : isCurrent(2) }"  @click="setCurrent(2)">Безпека</a>
                             </li>
                         </ul>
                     </div class="tabs__slide-wrapper">
                     <ul class="tabs__list">
                         <li class="tabs__item tab" :class="{ 'tabs__item--active' : isCurrent(0) }">
-                            <h3 class="visually-hidden">Градостроительство</h3>
+                            <h3 class="visually-hidden">Містобудування</h3>
                             <ul class="tab__features-list">
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Разработка градостроительной документации.</h4>
-                                    <p class="tab__item-description">Выполнение проектов генеральных планов населенных пунктов, землеустройства по изменению границ населенного пункта, отвода земельного участка любого целевого назначения (или его изменения), детальной планировки територий, нормативной денежной оценки земель населенного пункта и других документов в сфере градостроения согласно ДБН Б.1.1-15 2012.</p>
+                                    <h4 class="tab__item-title">Разробка містобудівної документації.</h4>
+                                    <p class="tab__item-description">Виконання проектів генеральних планів населених пунктів, землевпорядкування щодо зміни меж населеного пункту, відведення земенльної ділянки будь-якого цільового призначення (або його зміни), детального планування територій, нормативної грошової оцінки земель населеного пункту та інших документів у сфері містобудування відповідно до ДБН Б.1.1-15 2012.</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Разработка архитектурно-строительных чертежей, железобетонных и металлических конструкций объектов строительства</p>
+                                    <p class="tab__item-description">Розробка архітектурно-будівельних креслень, залізобетонних та металевих конструкцій об'єктів будівництва</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Проведение авторского надзора за строительством.</h4>
+                                    <h4 class="tab__item-title">Проведення авторського нагляду за будівництвом.</h4>
                                     <p class="tab__item-description"></p>
                                 </li>
                             </ul>
                         </li>
                         <li class="tabs__item tab" :class="{ 'tabs__item--active' : isCurrent(1) }">
-                            <h3 class="visually-hidden">Инженерное обеспечение зданий и сооружений</h3>
+                            <h3 class="visually-hidden">Інженерне забезпечення будинків і споруд</h3>
                             <ul class="tab__features-list">
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Внутренние системы водоснабжения</h4>
-                                    <p class="tab__item-description">Проектирование внутренних систем холодного и горячего водоснабжения, канализаций и водостока согласно ДБН В.2.5-64: 2012.</p>
+                                    <h4 class="tab__item-title">Внутрішні системи водопостачання</h4>
+                                    <p class="tab__item-description">Проектування внутрішніх систем холодного та гарячого водопостачання, каналізацій і водостоку згідно ДБН В.2.5-64: 2012.</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Внешние сети водоснабжения</h4>
-                                    <p class="tab__item-description">Проектирование внешних сетей водоснабжения: хозяйственно-питьевого, противопожарного и технического (оборотное водоснабжение), насосные станции и  станции водоочистки согласно с ДБН В.2.5-74: 2013</p>
+                                    <h4 class="tab__item-title">Зовнішні мережі водопостачання</h4>
+                                    <p class="tab__item-description">Проектування зовнішніх мереж водопостачання: господарсько-питного, протипожежного і технічного (оборотне водопостачання), насосні станції і станції водоочистки згідно з ДБН В.2.5-74 діє до: 2013</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Внешние сети водоотведения (канализаций):</h4>
-                                    <p class="tab__item-description">Проектирование внешних сетей водоотведения (канализаций): хозяйственно-бытовых, производственных и ливневых стоков, канализационные насосные станции  и станции очистки стоков согласно ДБН В.2.5-75: 2013.</p>
+                                    <h4 class="tab__item-title">Зовнішні мережі водовідведення (каналізації):</h4>
+                                    <p class="tab__item-description">Проектування зовнішніх мереж водовідведення (каналізації): господарсько-побутових, виробничих і зливових стоків, каналізаційні насосні станції та станції очистки стоків згідно ДБН В.2.5-75 діє до: 2013.</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Тепловые сети</h4>
-                                    <p class="tab__item-description">Проектирование тепловых сетей: теплоснабжение зданий и сооружений, тепловые пункты, котельные, теплогенераторные на газоподобном и твердом топливе согласно с ДБН В.2.5-39: 2008, ДБН В.2.5-20: 2001.</p>
+                                    <h4 class="tab__item-title">Теплові мережі</h4>
+                                    <p class="tab__item-description">Проектування теплових мереж: теплопостачання будівель і споруд, теплові пункти, котельні, теплогенераторні на газоподібному і твердому паливі згідно з ДБН В.2.5-39: 2008, ДБН В.2.5-20: 2001.</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Внешние и внутренние системы газоснабжения</h4>
-                                    <p class="tab__item-description">Проектирование внешних и внутренних систем газоснабжения высокого, среднего и низкого давлений: наружное газоснабжение населенных пунктов (улиц, поселков) промышленных предприятий, площадок, проектирование узлов учета природного газа, газорегуляторных пунктов (ГРП / ШГРП), способов дистанционной передачи данных, проектирование систем внутреннего газоснабжения согласно с ДБН-В.2.5-20: 2001, НПАОП 0.00-1.76-15.</p>
+                                    <h4 class="tab__item-title">Зовнішні та внутрішні системи газопостачання</h4>
+                                    <p class="tab__item-description">Проектування зовнішніх і внутрішніх систем газопостачання високого, середнього та низького тисків: зовнішнє газопостачання населених пунктів (вулиць, селищ) промислових підприємств, майданчиків, проектування вузлів обліку природного газу, газорегуляторних пунктів (ГРП / ШГРП), способів дистанційної передачі даних, проектування систем внутрішнього газопостачання згідно з ДБН-В.2.5-20: 2001, НПАОП 0.00-1.76-15.</p>
                                 </li>
                                 <li class="tab__features-item">
-                                    <h4 class="tab__item-title">Электротехнические системы</h4>
-                                    <p class="tab__item-description">Проектирование электротехнических систем зданий и сооружений, автоматизация (АСУ ТП, КВП), электрическое освещение, силовое электрооборудование, электроснабжение технологического оборудования зданий и сооружений.</p>
+                                    <h4 class="tab__item-title">Електротехнічні системи</h4>
+                                    <p class="tab__item-description">Проектування електротехнічних систем будівель і споруд, автоматизація (АСУ ТП, КВП), електричне освітлення, силове електрообладнання, електропостачання технологічного устаткування будівель і споруд.</p>
                                 </li>
                             </ul>
                         </li>
                         <li class="tabs__item tab" :class="{ 'tabs__item--active' : isCurrent(2) }">
-                            <h3 class="visually-hidden">Безопасность</h3>
+                            <h3 class="visually-hidden">Безпека</h3>
                             <ul class="tab__features-list">
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Проектирование молниезащиты зданий и сооружений согласно ДСТУ Б В.2.5-38: 2008.</p>
+                                    <p class="tab__item-description">Проектування блискавкозахисту будівель і споруд згідно з ДСТУ Б В.2.5-38: 2008.</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Проектирование систем пожарной сигнализации и оповещения о пожаре.</p>
+                                    <p class="tab__item-description">Проектування систем пожежної сигналізації та оповіщення про пожежу.</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Проектирование мероприятий по защите подземных инженерних систем от электрохимической коррозии: станции катодной защиты, протекторная защита.</p>
+                                    <p class="tab__item-description">Проектування заходів по захисту підземних інженерних систем від електрохімічної корозії: станції катодного захисту, протекторна захист.</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Проектирование и оценка влияния на окружающую среду (ОВОС).</p>
+                                    <p class="tab__item-description">Проектування і оцінка впливу на навколишнє середовище (ОВНС).</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Разработка энергетического паспорта зданий  согласно ДБН В.2.6-31: 2016.</p>
+                                    <p class="tab__item-description">Розробка енергетичного паспорта будівель згідно ДБН В.2.6-31 діє до: 2016.</p>
                                 </li>
                                 <li class="tab__features-item">
                                     <h4 class="tab__item-title"></h4>
-                                    <p class="tab__item-description">Проведение идентификации объектов повышенной опасности согласно с законом Украины "Про объекты повышенной опасности".</p>
+                                    <p class="tab__item-description">Проведення ідентифікації об'єктів підвищеної небезпеки згідно із законом України "Про об'єкти підвищеної небезпеки".</p>
                                 </li>
                             </ul>
                         </li>        
                     </ul>
-                    <a href="#" class="button-blue button-blue--full" @click="toggleForm">Получить консультацию</a>
+                    <a href="#" class="button-blue button-blue--full" @click="toggleForm">Отримати консультацію</a>
                 </div>
             </div>
         </section>
         <section class="main__section important-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="important-section__wrapper">
-                <h2 class="important-section__title title">Мы понимаем, что для вас важно</h2>
+                <h2 class="important-section__title title">Ми розуміємо, що для вас важливо</h2>
                 <ul class="important-section__list important">
                     <li class="important__item">
-                        <p class="important__text">Адекватная цена <br> за высокое качество</p>
+                        <p class="important__text">Адекватна ціна <br> за високу якість</p>
                     </li>
                     <li class="important__item">
-                        <p class="important__text">Соблюдение сроков подготовки документации</p>
+                        <p class="important__text">Дотримання термінів підготовки документації</p>
                     </li>
                     <li class="important__item important__item--three-lines">
-                        <p class="important__text">Соответствие проектной документации действующим нормативным документам</p>
+                        <p class="important__text">Відповідність проектної документації чинним нормативним документам</p>
                     </li>
                     <li class="important__item important__item--sub">
-                        <p class="important__text">Авторский надзор за строительством</p>
-                        <p class="important__subtext">(Контроль соответствия строительно-монтажных работ проектной документации)</p>
+                        <p class="important__text">Авторський нагляд за будівництвом</p>
+                        <p class="important__subtext">(Контроль відповідності будівельно-монтажних робіт проектної документації)</p>
                     </li>
                     <li class="important__item important__item--many-lines">
-                        <p class="important__text">Сопровождение проектной документации на всех стадиях</p>
-                        <p class="important__subtext">(Сбор и подготовка исходных данных, проведение инженерных изысканий (геология, геодезия), прохождение экспертизи проектно-сметной документации)</p>
+                        <p class="important__text">Супровід проектної документації на всіх стадіях</p>
+                        <p class="important__subtext">(Збір та підготовка вихідних даних, проведення інженерних вишукувань (геологія, геодезія), проходження експертизи проектно-кошторисної документації)</p>
                     </li>
                 </ul>
-                <p class="important-section__text">Предоставляем качественные услуги по проектной документации. <span class="orange orange--oneline">Мы более 7 лет на рынке!</span> Работая с нами, вы получите проект для любого вида строительства. Просто оформите заявку и ждите звонка нашего консультанта. Мы сделаем вам лучшее предложение!</p>
-                <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Оформить заявку</a>
+                <p class="important-section__text">Надаємо якісні послуги з проектної документації. <span class="orange orange--oneline">Ми більше 7 років на ринку!</span> Працюючи з нами, ви отримаєте проект для будь-якого виду будівництва. Просто оформіть заявку і чекайте дзвінка нашого консультанта. Ми зробимо вам кращу пропозицію!</p>
+                <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Оформити заявку</a>
             </div>
         </section>
         <section class="main__section ready-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="ready-section__wrapper" id="projects">
-                <h2 class="ready-section__title title">Готовые проекты</h2>
+                <h2 class="ready-section__title title">Готові проекти</h2>
                 <ul class="ready-section__list">
                     <li class="ready-section__item project">
                         <div class="project__img-container img-container containerOne">
@@ -273,10 +273,10 @@
                             <div class="img-container__pag img-container__pag--one">
                             </div>
                         </div>
-                        <h3 class="project__title">Строительство торгово-офисного здания и гаража с встроенными бытовыми помещениями. Киевская область. Бровары.</h3>
+                        <h3 class="project__title">Будівництво торгово-офісного будинку і гаража з вбудованими побутовими приміщеннями. Київська область. Бровари.</h3>
                         <ul class="project__features-list">
-                            <li class="project__item">Разработка и сопровождение проектной документации</li>
-                            <li class="project__item">Авторский надзор за строительством</li>
+                            <li class="project__item">Розробка і супровід проектної документації</li>
+                            <li class="project__item">Авторський нагляд за будівництвом</li>
                         </ul>
                     </li>
                     <li class="ready-section__item project">
@@ -295,10 +295,10 @@
                             <div class="img-container__pag img-container__pag--two">
                             </div>
                         </div>
-                        <h3 class="project__title">Ремонт системы вентиляции объекта - пищеблок Криворожской общеобразовательной школы №58.</h3>
+                        <h3 class="project__title">Ремонт системи вентиляції об'єкта - харчоблок Криворізької загальноосвітньої школи №58.</h3>
                         <ul class="project__features-list">
-                            <li class="project__item">Разработка и сопровождение проектной документации</li>
-                            <li class="project__item">Авторский надзор за строительством</li>
+                            <li class="project__item">Розробка і супровід проектної документації</li>
+                            <li class="project__item">Авторський нагляд за будівництвом</li>
                         </ul>
                     </li>
                     <li class="ready-section__item project">
@@ -335,10 +335,10 @@
                             <div class="img-container__pag img-container__pag--three">
                             </div>
                         </div>
-                        <h3 class="project__title">Реконструкция системы отопления с установлением котлов на твердо топливе как альтернативного источника тепло здания центрального корпуса инв. №10310001</h3>
+                        <h3 class="project__title">Реконструкція системи опалення з встановленням котлів на твердо паливі як альтернативного джерела тепло будівлі центрального корпусу інв. №10310001</h3>
                         <ul class="project__features-list">
-                            <li class="project__item">Разработка и сопровождение проектной документации</li>
-                            <li class="project__item">Авторский надзор за строительством</li>
+                            <li class="project__item">Розробка і супровід проектної документації</li>
+                            <li class="project__item">Авторський нагляд за будівництвом</li>
                         </ul>
                     </li>
                     <li class="ready-section__item project">
@@ -375,10 +375,10 @@
                             <div class="img-container__pag img-container__pag--four">
                             </div>
                         </div>
-                        <h3 class="project__title">Газоснабжение котельной «Городская больница №5.» КПТМ  «Криворожтеплосеть»</h3>
+                        <h3 class="project__title">Газопостачання котельні «Міська лікарня №5.» КПТМ «Криворіжтепломережа»</h3>
                         <ul class="project__features-list">
-                            <li class="project__item">Разработка и сопровождение проектной документации</li>
-                            <li class="project__item">Авторский надзор за строительством</li>
+                            <li class="project__item">Розробка и супровід проектної документації</li>
+                            <li class="project__item">Авторський нагляд за будівництвом</li>
                         </ul>
                     </li>
                 </ul>
@@ -386,27 +386,27 @@
         </section>
         <section class="main__section about-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="about-section__wrapper" id="about">
-                <h2 class="about-section__title title">О компании</h2>
-                <p class="about-section__company"><span class="orange">Базис-КР</span> - компания профессиональных инженеров, влюбленных в свою работу. Мы более 7 лет на рынке. С первого дня мы приняли позицию - <span class="orange">не продавать любые решения, лишь бы заработать денег, а сделать качественные проекты, которыми могли бы гордится.</span></p>
+                <h2 class="about-section__title title">Про компанію</h2>
+                <p class="about-section__company"><span class="orange">Базис-КР</span> - компанія професійних інженерів, закоханих в свою роботу. Ми більше 7 років на ринку. З першого дня ми прийняли позицію - <span class="orange">не продавати будь-які рішення, аби заробити грошей, а зробити якісні проекти, якими могли б пишатися.</span></p>
                 <div class="about-section__results results">
                     <div class="results__text">
-                        <p class="results__paragraph">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность.</p>
-                        <p class="results__paragraph">Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР.</p>
-                        <p class="results__paragraph">Сотрудничество с нами - простой и эффективный способ создания проектной документации любой сложности. Возможность использовать современыне разработки в программном обеспечении, создавать проекты в формате 3D.</p>
-                        <p class="results__paragraph">Обратившись к нам, вы снимаете с себя все проблемы, связанные с проектированием и согласованием. Также мы обеспечиваем должную поддержку во время строительства. Сопровождаем проект на всех стадиях, дабы избежать сюрпризов в перспективе.</p> 
+                        <p class="results__paragraph">Цього правила дотримуємося в своїй роботі і по сей день: робимо ексклюзивні проекти, які поєднують в собі красу і функціональність.</p>
+                        <p class="results__paragraph">Можливо, це не скромно, але проекти такого ж високої якості, як ми, роблять тільки одиниці. І кожен наш клієнт, партнер або конкурент підтвердить, що скрупульозність до кожного елементу і старанність - візитна картка Базис-КР.</p>
+                        <p class="results__paragraph">Співпраця з нами - простий і ефективний спосіб створення проектної документації будь-якої складності. Можливість використовувати современине розробки в програмному забезпеченні, створювати проекти у форматі 3D.</p>
+                        <p class="results__paragraph">Звернувшись до нас, ви знімаєте з себе всі проблеми, пов'язані з проектуванням і узгодженням. Також ми забезпечуємо належну підтримку під час будівництва. Супроводжуємо проект на всіх стадіях, щоб уникнути сюрпризів в перспективі.</p> 
                     </div>
                     <ul class="results__list">
                         <li class="results__item">
-                            <span class="results__number">256</span> проектов    
+                            <span class="results__number">256</span> проектів    
                         </li>
                         <li class="results__item">
-                            <span class="results__number">26</span> работников
+                            <span class="results__number">26</span> працівників
                         </li>
                         <li class="results__item">
-                            <span class="results__number">211</span> гражданских пректов
+                            <span class="results__number">211</span> цивільних проектів
                         </li>
                         <li class="results__item">
-                            <span class="results__number">45</span> промышленных проектов
+                            <span class="results__number">45</span> промислових проектів
                         </li>
                     </ul>
                 </div>
@@ -416,7 +416,7 @@
             <div class="reviews-section__wrapper">
                 <div class="reviews-section__list-wrapper reviews">
                     <h2 class="reviews-section__title title">
-                        О нас говорят
+                        Про нас говорять
                     </h2>
                     <div class="reviews__controls">
                         <button class="reviews__button reviews__button--prev"><span class="visually-hidden">Назад</span></button>
@@ -424,28 +424,28 @@
                     </div>
                     <ul class="reviews__list swiper-wrapper">
                         <li class="reviews__item swiper-slide">
-                            <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
-                            <cite class="reviews__author">Администрация школы №58</cite>
+                            <blockquote class="reviews__review">Цього правила дотримуємося в своїй роботі і по сей день: робимо ексклюзивні проекти, які поєднують в собі красу і функціональність. Можливо, це не скромно, але проекти такого ж високої якості, як ми, роблять тільки одиниці. І кожен наш клієнт, партнер або конкурент підтвердить, що скрупульозність до кожного елементу і старанність - візитна картка Базис-КР.</blockquote>
+                            <cite class="reviews__author">Адміністрація школи №58</cite>
                         </li>
                         <li class="reviews__item swiper-slide">
-                            <blockquote class="reviews__review">ООО «МАКТОП» сотрудничало с ООО «БАЗИС-КР»
-                                выполнение работ на разработку проектной документации (стадия
-                                «Рабочий проект») «Строительство торгово-офисного здания и гаража
-                                со встроенными бытовыми помещениями ».
-                                В результате работа была выполнена профессионально и в
-                                установленный срок.
-                                планируем и дальше поддерживать деловые контакты с ООО
-                                КР », которые всегда придерживаются лояльного и индивидуального
-                                подхода к заказчику.</blockquote>
-                            <cite class="reviews__author">М. Земляк Директор ООО «МАКТОП»</cite>
+                            <blockquote class="reviews__review">ТОВ «МАКТОП» співпрацювало з ТОВ «БАЗИС-КР» 
+                                у виконанні робіт на розробку проектної документації (стадія 
+                                «Робочий проект») «Будівництво торгово-офісної будівлі та гаражу 
+                                з вбудованими побутовими приміщеннями». 
+                                В результаті робота була виконана професійно і в 
+                                установлений строк. 
+                                плануємо і далі підтримувати ділові контакти з ТОВ 
+                                КР», які завжди дотримуються лояльного і індивідуального 
+                                підходу до замовника.</blockquote>
+                            <cite class="reviews__author">М. Земляк Директор ТОВ «МАКТОП»</cite>
                         </li>
                         <li class="reviews__item swiper-slide">
-                            <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
-                            <cite class="reviews__author">Администрация школы №58</cite>
+                            <blockquote class="reviews__review">Цього правила дотримуємося в своїй роботі і по сей день: робимо ексклюзивні проекти, які поєднують в собі красу і функціональність. Можливо, це не скромно, але проекти такого ж високої якості, як ми, роблять тільки одиниці. І кожен наш клієнт, партнер або конкурент підтвердить, що скрупульозність до кожного елементу і старанність - візитна картка Базис-КР.</blockquote>
+                            <cite class="reviews__author">Адміністрація школи №58</cite>
                         </li>
                         <li class="reviews__item swiper-slide">
-                            <blockquote class="reviews__review">Этого правила придерживаемся в своей работе и по сей день: делаем эксклюзивные проекты, которые сочетают в себе красоту и функциональность. Возможно, это не скромно, но проекты такого же высокого качества, как мы, делают только единицы. И каждый наш клиент, партнер или конкурент подтвердит, что дотошность к каждому элементу и исполнительность - визитная карточка Базис-КР. </blockquote>
-                            <cite class="reviews__author">Администрация школы №58</cite>
+                            <blockquote class="reviews__review">Цього правила дотримуємося в своїй роботі і по сей день: робимо ексклюзивні проекти, які поєднують в собі красу і функціональність. Можливо, це не скромно, але проекти такого ж високої якості, як ми, роблять тільки одиниці. І кожен наш клієнт, партнер або конкурент підтвердить, що скрупульозність до кожного елементу і старанність - візитна картка Базис-КР.</blockquote>
+                            <cite class="reviews__author">Адміністрація школи №58</cite>
                         </li>
                     </ul>
                 </div>
@@ -454,27 +454,27 @@
         <section class="main__popup contact-popup" :class="{ 'contact-popup--shown' : isFormPopup }" >
             <div class="contact-popup__wrapper">
                 <h2 class="contact-popup__title title">
-                    <span class="title__line">Дайте нам знать</span>
-                    <span class="title__line">О вашем проекте</span>
-                    <span class="orange-label orange-label--form">Проектная документация</span>
+                    <span class="title__line">Дайте нам знати</span>
+                    <span class="title__line">Про ваш проект</span>
+                    <span class="orange-label orange-label--form">Проектна документація</span>
                 </h2>
                 <div class="contact-popup__tel-block tel-block">
-                    <p class="tel-block__title">Свяжитесь с нами</p>
+                    <p class="tel-block__title">Зв'яжіться з нами</p>
                     <span class="tel-block__label">Телефон</span>
                     <a class="tel-block__link" href="tel:380966185013">+38 096 618 50 13</a>
-                    <p class="tel-block__footer">Оставьте заявку, и наш менеджер свяжется с вами в ближайшее время</p>
+                    <p class="tel-block__footer">Залиште заявку, і наш менеджер зв'яжеться з вами найближчим часом</p>
                 </div>
                 <form action="/submit" @submit.prevent="sendForm" method="POST" class="contact-popup__contact-form contact-form">
-                    <p class="contact-form__legend contact-form__legend--form-page">Нужна проектная документация без головной боли?
-                        <span class="contact-form__legend">Оставьте заявку</span>
+                    <p class="contact-form__legend contact-form__legend--form-page">Потрібна проектна документація без головного болю?
+                        <span class="contact-form__legend">Залиште заявку</span>
                     </p>
-                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="full-form-name" placeholder="Ваше имя">
+                    <input class="contact-form__input" v-model="clientName" type="text" name="name" id="full-form-name" placeholder="Ваше ім'я">
                     <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="full-form-tel" placeholder="Телефон" required>
                     <input class="contact-form__input" v-model="clientEmail" type="email" name="email" id="full-form-email" placeholder="E-mail">
-                    <textarea class="contact-form__input" v-model="clientMessage" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
+                    <textarea class="contact-form__input" v-model="clientMessage" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше повідомлення"></textarea>
                     <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
                     <p class="contact-form__confidence-policy confidence-policy">
-                        Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
+                        Натискаючи на кнопку, ви погоджуєтеся з <a href="#" class="confidence-policy__link">Політикою конфіденційності</a>
                     </p>
                 </form>
             </div>
@@ -482,7 +482,7 @@
     </main>
     <footer class="footer">
         <div class="footer__logo">
-            <span class="orange-label">Проектная документация</span>
+            <span class="orange-label">Проектна документація</span>
             <p class="footer__logo-text">Базис-КР</p>
         </div>
         <div class="footer__contacts">
@@ -494,7 +494,7 @@
                     </picture>
                 </div>
                 <div class="owner-info__text">
-                    <p class="owner-info__name">Цидуля Павел Александрович</p>
+                    <p class="owner-info__name">Цидуля Павло Олександрович</p>
                     <p class="owner-info__phone">
                         <span class="owner-info__post">Директор</span>
                         <a href="tel:+380966185013" class="owner-info__phone">
@@ -505,9 +505,9 @@
                         </a>
                     </p>
                 </div>
-                <button class="owner-info__submit-button button-blue" type="button" @click="toggleForm" >{{ !isFormPopup ? 'Оставить заявку' : 'Вернуться на главную' }}</button>
+                <button class="owner-info__submit-button button-blue" type="button" @click="toggleForm" >{{ !isFormPopup ? 'Залишити заявку' : 'Повернутися на головну' }}</button>
                 <p class="owner-info__confidence-policy confidence-policy">
-                    <a href="#" class="confidence-policy__link">Политика конфиденциальности</a>
+                    <a href="#" class="confidence-policy__link">Політика конфіденційності</a>
                 </p>
             </div>
         </div>
