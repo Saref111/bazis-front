@@ -59,6 +59,10 @@ const App = Vue.createApp({
         errorHandler() {
             this.formHasNotBeenSent = true
         },
+        setLanguage(e) {
+            document.cookie = 'lang=' + e.target.value
+            fetch('/')
+        }
     },
 }).mount('#app')
 
