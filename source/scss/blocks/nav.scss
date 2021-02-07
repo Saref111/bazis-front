@@ -31,6 +31,10 @@
         line-height: 21px;
         text-transform: uppercase;
         color: #000;
+
+        &--language {
+            border: none;
+        }
     }
 }
 
@@ -102,7 +106,7 @@
     .nav {
         &__list {
             align-items: center;
-            padding-right: 88px;
+            padding-right: 20px;
             width: 370px;
         }
     }

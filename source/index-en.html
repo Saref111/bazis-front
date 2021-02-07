@@ -40,6 +40,14 @@
                     <li class="nav__item">
                         <a href="#about" class="nav__link" @click="toggleMobileMenu">About company</a>
                     </li>
+                    <li class="nav__item">
+                        <span class="visually-hidden">Language</span>
+                        <select href="#about" class="nav__link nav__link--language">
+                            <option value="ru">RU</option>
+                            <option value="ua">UA</option>
+                            <option value="en" selected>EN</option>
+                        </select>
+                    </li>
                 </ul>
                 <div class="owner-info">
                     <div class="owner-info__avatar">
@@ -214,7 +222,7 @@
                     </li>
                 </ul>
                 <p class="important-section__text">We provide quality services for project documentation. <span class="orange orange--oneline">We have been on the market for over 7 years!</span> Working with us, you will receive a project for any type of construction. Just fill out an application and wait for a call from our consultant. We will make you our best offer!</p>
-                <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Оформить заявку</a>
+                <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Make a request</a>
             </div>
         </section>
         <section class="main__section ready-section" :class="{ 'main__section--hidden' : isFormPopup }">
