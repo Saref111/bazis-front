@@ -25,6 +25,10 @@
         color: #303030;
     }
 
+    textarea.contact-form__input {
+        min-height: 50px;
+    }
+
     &__input {
         display: block;
         width: 100%;
@@ -34,6 +38,11 @@
         margin-bottom: 26px;
         color: rgba(48, 48, 48, 1);
         outline: none;
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+
 
         &::placeholder {
             font-family: SF Pro Display;

@@ -21,20 +21,10 @@
         border-top: 1px solid #c4c4c4;
         padding-top: 15px;
         padding-bottom: 40px;
-        
+
         &:last-child {
             padding-bottom: 78px;
             position: relative;
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100vw;
-                height: 1px;
-                bottom: 0;
-                background-color: #c4c4c4;
-                left: calc(-100vw / 2 + 50%);
-            }
         }
     }
 
@@ -62,7 +52,7 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .results {
         flex-direction: column;
         max-width: 50%;
@@ -81,9 +71,10 @@
         }
 
         &__item {
-            width: 50%;
+            width: 48%;
+
             &:last-child {
-    
+
                 &::after {
                     width: 0;
                     height: 0;

@@ -73,12 +73,14 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
     slidesPerView: 1.16,
     initialSlide: 1,
     watchOverflow: false,
+    init: true,
     breakpoints: {
         768: {
             spaceBetween: 50,
-            slidesPerView: 'auto',
+            slidesPerView: 3,
+            init: true,
         },
-        1600: {
+        1500: {
             slidesPerView: 3,
             init: false
         },

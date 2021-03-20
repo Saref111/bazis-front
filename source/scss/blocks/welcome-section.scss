@@ -15,7 +15,7 @@
             line-height: 172px;
             letter-spacing: -2px;
             text-transform: uppercase;
-            color: #fff;
+            color: #FEFDF9;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: rgba(48, 48, 48, 0.2);
             white-space: nowrap;
@@ -62,7 +62,7 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .welcome-section {
         padding-top: 0;
         position: relative;

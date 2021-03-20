@@ -41,7 +41,7 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .ready-section {
         width: 100%;
         max-width: unset;
@@ -54,17 +54,18 @@
             padding-right: 100px;
 
         }
+
         &__list {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center;
+            align-items: baseline;
         }
 
         &__item {
             &:last-child {
                 margin: 0;
-    
+
                 &::after {
                     width: 100%;
                     height: 1px;

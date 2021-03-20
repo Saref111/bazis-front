@@ -5,7 +5,7 @@
 
     background-image: url("../img/Group12.png"), url("../img/Group17.png");
     background-size: 214px 126px, 150px, 157px;
-    background-position: 0 85px, 180px 25px;
+    background-position: 65% 85px, 40% 25px;
     background-repeat: no-repeat;
 
     &__item {
@@ -112,24 +112,24 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .important {
         display: flex;
         flex-wrap: wrap;
 
         background-size: 361px 269px, 396px 442px;
-        background-position: 0 358px,180px 90px;
+        background-position: 0 358px, 180px 90px;
 
         &__item {
-            max-width: 351px;
-            min-width: 351px;
+            max-width: 50%;
+            min-width: 50%;
 
             &:nth-child(3) {
                 border-bottom-color: #BDBDBD;
             }
 
             &:last-child {
-                margin-left: 351px;
+                margin-left: 50%;
             }
         }
     }

@@ -23,7 +23,7 @@
         padding-left: 35px;
         padding-top: 68px;
         position: relative;
-        
+
         &::before {
             position: absolute;
             content: '';
@@ -38,7 +38,7 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .important-section {
         &__wrapper {
             max-width: 1600px;
@@ -46,11 +46,13 @@
             padding-left: 100px;
             padding-right: 100px;
         }
+
         &__title {
             font-weight: 600;
             font-size: 36px;
             line-height: 43px;
         }
+
         &__text {
             max-width: 820px;
             margin-left: auto;
@@ -63,7 +65,7 @@
                 font-size: 26px;
             }
 
-            
+
         }
     }
 }

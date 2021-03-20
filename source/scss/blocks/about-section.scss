@@ -18,7 +18,7 @@
         @media (min-resolution: 1.5dppx) {
             background-image: url('../img/company-mobile@2x.png');
         }
-        
+
         & .orange:first-child {
             position: relative;
             padding-left: 35px;
@@ -48,12 +48,12 @@
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
     .about-section {
         width: 100%;
         padding-top: 0;
-        background-image: linear-gradient(#FDF9F3 0, #FDF9F3 444px, white 444px, white 100%);
-        
+        background-image: linear-gradient(#FDF9F3 0, #FDF9F3 444px, #FEFDF9 444px, #FEFDF9 100%);
+
         &__wrapper {
             max-width: 1600px;
             margin: 0 auto;
@@ -81,7 +81,7 @@
             margin-top: 130px;
 
             & .orange:first-child {
-    
+
                 &::before {
                     top: 16px;
                 }
