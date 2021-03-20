@@ -14,7 +14,6 @@
     }
 
     &__item {
-        width: 330px;
         min-width: 330px;
         background: #FFFFFF;
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.06);
@@ -43,14 +42,14 @@
 @media (min-width: 1024px) {
     .reviews {
         position: relative;
-        
+
         &__controls {
             display: flex;
             position: absolute;
             top: 0;
             right: 0;
             width: 132px;
-            justify-content: space-between; 
+            justify-content: space-between;
             padding-right: 15px;
         }
 

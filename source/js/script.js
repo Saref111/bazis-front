@@ -167,7 +167,7 @@ const ProjectSwiperFour = new Swiper('.containerFour', {
 
 const ReviewsSwiper = new Swiper('.reviews', {
     spaceBetween: 20,
-    slidesPerView: 1.11,
+    slidesPerView: 'auto',
     breakpoints: {
         768: {
             slidesPerView: 2,
