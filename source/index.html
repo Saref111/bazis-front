@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg" href="favicon.svg" />
     <title>Базис-КР</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/vue.prod.js"></script>
+    <script src="js/vue.min.js"></script>
     <script src="js/swiper.min.js"></script>
 </head>
 <body id="app">
@@ -234,6 +234,25 @@
                             <ul class="img-container__list swiper-wrapper">
                                 <li class="img-container__item swiper-slide">
                                     <picture>
+                                        <source media="(min-width: 786px)" type="image/webp" srcset="img/brovary-5.webp 1x, img/brovary-5.webp 2x">
+                                        <source type="image/webp" srcset="img/brovary-mobile-5.webp 1x, img/brovary-mobile-5.webp 2x">
+
+                                        <source media="(min-width: 786px)" srcset="img/brovary-5.jpeg 1x, img/brovary-5.jpeg 2x">
+                                        <img src="img/brovary-mobile-5.jpg" alt="Pd" srcset="img/brovary-mobile-5.jpg 2x">
+                                    </picture>
+                                </li>
+                                <li class="img-container__item swiper-slide">
+                                    <picture>
+                                        <source media="(min-width: 786px)" type="image/webp" srcset="img/brovary-4.webp 1x, img/brovary-4.webp 2x">
+                                        <source type="image/webp" srcset="img/brovary-mobile-4.webp 1x, img/brovary-mobile-4.webp 2x">
+
+                                        <source media="(min-width: 786px)" srcset="img/brovary-4.jpeg 1x, img/brovary-4.jpeg 2x">
+                                        <img src="img/brovary-mobile-4.jpg" alt="Pd" srcset="img/brovary-mobile-4.jpg 2x">
+                                    </picture>
+                                </li>
+                                
+                                <li class="img-container__item swiper-slide">
+                                    <picture>
                                         <source media="(min-width: 786px)" type="image/webp" srcset="img/brovary.webp 1x, img/brovary.webp 2x">
                                         <source type="image/webp" srcset="img/brovary-mobile.webp 1x, img/brovary-mobile.webp 2x">
 
@@ -259,24 +278,7 @@
                                         <img src="img/brovary-mobile-3.jpg" alt="Pd" srcset="img/brovary-mobile-3.jpg 2x">
                                     </picture>
                                 </li>
-                                <li class="img-container__item swiper-slide">
-                                    <picture>
-                                        <source media="(min-width: 786px)" type="image/webp" srcset="img/brovary-4.webp 1x, img/brovary-4.webp 2x">
-                                        <source type="image/webp" srcset="img/brovary-mobile-4.webp 1x, img/brovary-mobile-4.webp 2x">
-
-                                        <source media="(min-width: 786px)" srcset="img/brovary-4.jpeg 1x, img/brovary-4.jpeg 2x">
-                                        <img src="img/brovary-mobile-4.jpg" alt="Pd" srcset="img/brovary-mobile-4.jpg 2x">
-                                    </picture>
-                                </li>
-                                <li class="img-container__item swiper-slide">
-                                    <picture>
-                                        <source media="(min-width: 786px)" type="image/webp" srcset="img/brovary-5.webp 1x, img/brovary-5.webp 2x">
-                                        <source type="image/webp" srcset="img/brovary-mobile-5.webp 1x, img/brovary-mobile-5.webp 2x">
-
-                                        <source media="(min-width: 786px)" srcset="img/brovary-5.jpeg 1x, img/brovary-5.jpeg 2x">
-                                        <img src="img/brovary-mobile-5.jpg" alt="Pd" srcset="img/brovary-mobile-5.jpg 2x">
-                                    </picture>
-                                </li>
+                                
                             </ul>
                             <div class="img-container__pag img-container__pag--one">
                             </div>
