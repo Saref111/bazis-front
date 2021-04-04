@@ -124,7 +124,11 @@
             max-width: 50%;
             min-width: 50%;
 
+            &:nth-child(1) {
+                border-right-color: transparent;
+            }
             &:nth-child(3) {
+                border-right-color: transparent;
                 border-bottom-color: #BDBDBD;
             }
 

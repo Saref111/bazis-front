@@ -88,9 +88,7 @@
                     <input class="contact-form__input" v-model="clientName" type="text" name="name" id="name" placeholder="Ваше имя">
                     <input class="contact-form__input" v-model="clientPhoneNumber" type="tel" name="tel" id="tel" placeholder="Телефон" required>
                     <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
-                    <p class="contact-form__confidence-policy confidence-policy">
-                        Нажимая на кнопку, вы соглашаетесь <br> с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
-                    </p>
+                    
                 </form>
                 <span class="welcome-section__arrow">Листать далее</span>
             </div>
@@ -475,7 +473,7 @@
                 <div class="contact-popup__tel-block tel-block">
                     <p class="tel-block__title">Свяжитесь с нами</p>
                     <span class="tel-block__label">Телефон</span>
-                    <a class="tel-block__link" href="tel:380966185013">+38 096 618 50 13</a>
+                    <a class="tel-block__link" href="tel:380664313867"> +38 066 431 38 67</a>
                     <p class="tel-block__footer">Оставьте заявку, и наш менеджер свяжется с вами в ближайшее время</p>
                 </div>
                 <form action="/submit" @submit.prevent="sendForm" method="POST" class="contact-popup__contact-form contact-form">
@@ -487,9 +485,7 @@
                     <input class="contact-form__input" v-model="clientEmail" type="email" name="email" id="full-form-email" placeholder="E-mail">
                     <textarea class="contact-form__input" v-model="clientMessage" name="message" id="full-form-message" cols="25" rows="1" placeholder="Ваше сообщение"></textarea>
                     <button class="contact-form__submit-button button-blue" :class="{ 'contact-form__submit-button--success': formHasBeenSent, 'contact-form__submit-button--error': formHasNotBeenSent }" type="submit">{{ !formHasBeenSent && !formHasNotBeenSent ? 'Оставить заявку' : formHasBeenSent ? 'Успешно отправлено' : formHasNotBeenSent ? 'Не отправлено' : '' }}</button>
-                    <p class="contact-form__confidence-policy confidence-policy">
-                        Нажимая на кнопку, вы соглашаетесь с <a href="#" class="confidence-policy__link">Политикой конфиденциальности</a>
-                    </p>
+                    
                 </form>
             </div>
         </section>
@@ -511,18 +507,16 @@
                     <p class="owner-info__name">Цидуля Павел Александрович</p>
                     <p class="owner-info__phone">
                         <span class="owner-info__post">Директор</span>
-                        <a href="tel:+380966185013" class="owner-info__phone">
+                        <a href="tel:380664313867" class="owner-info__phone">
                             <svg class="owner-info__phone-icn" width="16" height="16">
                                 <use xlink:href="img/sprite.svg#icn_Frame3"></use>
                             </svg>
-                            +38 096 618 50 13
+                            +38 066 431 38 67
                         </a>
                     </p>
                 </div>
                 <button class="owner-info__submit-button button-blue" type="button" @click="toggleForm" >{{ !isFormPopup ? 'Оставить заявку' : 'Вернуться на главную' }}</button>
-                <p class="owner-info__confidence-policy confidence-policy">
-                    <a href="#" class="confidence-policy__link">Политика конфиденциальности</a>
-                </p>
+                
             </div>
         </div>
     </footer>
