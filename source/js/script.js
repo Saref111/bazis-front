@@ -10,9 +10,39 @@ const App = Vue.createApp({
             clientMessage: '',
             formHasBeenSent: false,
             formHasNotBeenSent: false,
+            animated: false,
+        }
+    },
+    mounted() {
+        window.onscroll = () => {
+            if (this.isInViewPort(this.$refs.numbers) && !this.animated) {
+                Array.from(this.$refs.numbers.querySelectorAll('.results__number')).forEach((it, i) => this.animate(it, 10 * i))
+                this.animated = true
+            }
         }
     },
     methods: {
+        isInViewPort(el) {
+            const rect = el.getBoundingClientRect()
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            )
+        },
+        animate(e, ms = 50) {
+            const finalNumber = e.innerHTML
+            let i = 0
+            const f = setInterval(() => {
+              if (i >= finalNumber) {
+                clearInterval(f)
+              }
+              e.innerHTML = i
+              i++      
+            }, ms)
+            
+          },
         toggleForm() {
             this.isFormPopup = !this.isFormPopup
         },
