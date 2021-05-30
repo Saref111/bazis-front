@@ -110,7 +110,7 @@ const ListSwiper = new Swiper ('.tabs__slide-wrapper', {
             slidesPerView: 3,
             init: true,
         },
-        1500: {
+        1480: {
             slidesPerView: 3,
             init: false
         },
