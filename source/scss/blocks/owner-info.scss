@@ -44,7 +44,15 @@
             font-size: 16px;
             line-height: 19px;
             color: #FFFFFF;
+            padding-bottom: 15px;
 
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+
+            @media (min-width: 1144px) {
+                margin-right: 25px;
+            }
         }
 
         & .owner-info__name {
