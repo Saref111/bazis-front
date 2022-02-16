@@ -1,11 +1,13 @@
 .owner-info {
     margin: 0 auto;
     margin-top: 30px;
-    width: 100%;
-    max-width: 296px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
+
+    &:not(:last-child) {
+        padding-bottom: 25px;
+    }
 
     &::before {
         position: absolute;
@@ -42,15 +44,17 @@
             font-size: 16px;
             line-height: 19px;
             color: #FFFFFF;
-            
+
         }
 
         & .owner-info__name {
             color: #FFFFFF;
         }
+
         & .owner-info__phone {
             color: #FF7800;
         }
+
         & .owner-info__phone-icn {
             fill: #FF7800;
         }
@@ -66,7 +70,7 @@
             margin-right: auto;
         }
 
-        & .owner-info__confidence-policy a{
+        & .owner-info__confidence-policy a {
             font-family: SF Pro Display, sans-serif;
             font-style: normal;
             font-weight: 500;
@@ -90,10 +94,10 @@
             &:focus {
                 color: #FF7800;
             }
-            
+
             &:active {
                 color: #FF7800;
-                
+
                 opacity: 0.5;
             }
         }
@@ -143,12 +147,27 @@
     &__phone-icn {
         transform: translateY(3px);
     }
+
+    &__text {
+        min-width: 270px;
+    }
 }
 
 @media (min-width: 768px) {
     .owner-info {
         margin: 0;
         margin-bottom: 15px;
+        padding-bottom: 0;
+        min-width: 50%;
+        justify-content: flex-end;
+
+        &:first-of-type {
+            margin-left: auto;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 0px;
+        }
 
         &::before {
             width: 1px;
@@ -156,6 +175,25 @@
             background-color: transparent;
             top: unset;
             left: unset;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .owner-info {
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (min-width: 1220px) {
+    .owner-info {
+        min-width: unset;
+
+        &:not(:last-child) {
+            margin-right: 25px;
         }
     }
 }

@@ -44,7 +44,7 @@
         display: flex;
         flex-wrap: wrap-reverse;
         justify-content: flex-end;
-        width: 50%;
+        width: 75%;
         padding: 0;
 
         &__list {
@@ -52,6 +52,7 @@
             flex-direction: row;
             justify-content: space-between;
             max-width: 369px;
+            margin-left: auto;
         }
 
         &__item {
@@ -83,32 +84,48 @@
     }
 }
 
+@media (min-width: 1014px) {
+    .nav {
+        &__list {
+            align-items: center;
+            width: 100%;
+            max-width: unset;
+            padding-left: calc(100% - 350px);
+        }
+    }
+}
+
 @media (min-width: 1024px) {
     .nav {
+        padding-right: 25px;
+
         & .owner-info {
             margin-top: 13px;
         }
 
         &__list {
             align-items: center;
-            width: 300px;
+            width: 100%;
+            max-width: unset;
         }
     }
 }
+
 @media (min-width: 1363px) {
     .nav {
         &__list {
             align-items: center;
-            padding-right: 5%;
         }
     }
 }
+
 @media (min-width: 1480px) {
     .nav {
         &__list {
             align-items: center;
-            padding-right: 20px;
             width: 370px;
+            padding: 0;
+            padding-right: 20px;
         }
     }
 }
