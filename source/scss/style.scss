@@ -2,6 +2,8 @@
 @import "./fonts.scss";
 @import "./global.scss";
 @import "./mixins.scss";
+@import "./animations.scss";
+
 @import "./blocks/header.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/nav.scss";
@@ -29,3 +31,4 @@
 @import "./blocks/orange-label.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/tel-block.scss";
+@import "./blocks/call-popover.scss";

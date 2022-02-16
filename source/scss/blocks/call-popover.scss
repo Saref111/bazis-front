@@ -1,0 +1,61 @@
+.call-popover {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: #fff;
+    padding-top: 5px;
+
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+
+    &__wrapper {
+        margin: 0 auto;
+        width: 320px;
+        position: relative;
+        text-align: center;
+    }
+
+    &__link {
+        text-align: center;
+        width: 100%;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    &__close {
+        @include button-reset;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(45deg);
+            transform-origin: center;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(-45deg);
+            transform-origin: center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .call-popover {
+        display: none;
+    }
+}
