@@ -11,6 +11,7 @@ const App = Vue.createApp({
             formHasBeenSent: false,
             formHasNotBeenSent: false,
             animated: false,
+            isCallPopoverShown: true
         }
     },
     mounted() {
@@ -22,6 +23,9 @@ const App = Vue.createApp({
         }
     },
     methods: {
+        hideCallPopover() {
+            this.isCallPopoverShown = !this.isCallPopoverShown
+        },
         isInViewPort(el) {
             const rect = el.getBoundingClientRect()
             return (

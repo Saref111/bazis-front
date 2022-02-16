@@ -93,6 +93,14 @@
         </div>
     </header>
     <main class="main">
+        <div v-if="isCallPopoverShown" class="call-popover">
+            <div class="call-popover__wrapper">
+                 <a href="tel:+380677625828" class="call-popover__link">Contact with our engineers <br> right now!</a>
+                 <button class="call-popover__close" @click="hideCallPopover">
+                     <span class="visually-hidden">Close</span>
+                 </button>
+            </div>
+         </div>
         <section class="main__section welcome-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="welcome-section__wrapper">
                 <h1 class="welcome-section__title title title--main">
@@ -241,7 +249,7 @@
                         <p class="important__subtext">(Collection and preparation of initial data, engineering surveys (geology, geodesy), examination of design and estimate documentation)</p>
                     </li>
                 </ul>
-                <p class="important-section__text">We provide quality services for project documentation. <span class="orange orange--oneline">We have been on the market for over 7 years!</span> Working with us, you will receive a project for any type of construction. Just fill out an application and wait for a call from our consultant. We will make you our best offer!</p>
+                <p class="important-section__text">We provide quality services for project documentation. <span class="orange orange--oneline">We have been on the market for <br> over 7 years!</span> Working with us, you will receive a project for any type of construction. Just fill out an application and wait for a call from our consultant. We will make you our best offer!</p>
                 <a href="#" class="button-blue button-blue--arrow" @click="toggleForm">Make a request</a>
             </div>
         </section>

@@ -94,10 +94,10 @@
         </div>
     </header>
     <main class="main">
-        <div class="call-popover">
+        <div v-if="isCallPopoverShown" class="call-popover">
            <div class="call-popover__wrapper">
-                <a href="tel:+380677625828" class="call-popover__link">Свяжитесь с нашими инженерами прямо сейчас</a>
-                <button class="call-popover__close">
+                <a href="tel:+380677625828" class="call-popover__link">Свяжитесь с нашими инженерами прямо сейчас!</a>
+                <button class="call-popover__close" @click="hideCallPopover">
                     <span class="visually-hidden">Закрыть</span>
                 </button>
            </div>

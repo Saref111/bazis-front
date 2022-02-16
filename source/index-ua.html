@@ -93,6 +93,14 @@
         </div>
     </header>
     <main class="main">
+        <div v-if="isCallPopoverShown" class="call-popover">
+            <div class="call-popover__wrapper">
+                 <a href="tel:+380677625828" class="call-popover__link">Зв'яжіться із нашими інженерами вже зараз!</a>
+                 <button class="call-popover__close" @click="hideCallPopover">
+                     <span class="visually-hidden">Закрити</span>
+                 </button>
+            </div>
+         </div>
         <section class="main__section welcome-section" :class="{ 'main__section--hidden' : isFormPopup }">
             <div class="welcome-section__wrapper">
                 <h1 class="welcome-section__title title title--main">
